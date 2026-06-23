@@ -1,0 +1,73 @@
+{
+  "queries": [
+    {
+      "query_id": "Q1",
+      "database": "OpenAlex",
+      "query": "\"networked control system\" \"smart agriculture\" irrigation",
+      "records_returned": 21
+    },
+    {
+      "query_id": "Q2",
+      "database": "OpenAlex",
+      "query": "\"event-triggered control\" irrigation agriculture",
+      "records_returned": 25
+    },
+    {
+      "query_id": "Q3",
+      "database": "OpenAlex",
+      "query": "\"model predictive control\" irrigation greenhouse agriculture",
+      "records_returned": 25
+    },
+    {
+      "query_id": "Q4",
+      "database": "OpenAlex",
+      "query": "LoRaWAN latency irrigation greenhouse control",
+      "records_returned": 25
+    },
+    {
+      "query_id": "Q5",
+      "database": "OpenAlex",
+      "query": "\"wireless sensor network\" greenhouse irrigation control",
+      "records_returned": 25
+    },
+    {
+      "query_id": "Q6",
+      "database": "OpenAlex",
+      "query": "\"edge computing\" \"smart agriculture\" control irrigation",
+      "records_returned": 25
+    },
+    {
+      "query_id": "Q7",
+      "database": "OpenAlex",
+      "query": "\"NB-IoT\" smart agriculture irrigation control",
+      "records_returned": 25
+    },
+    {
+      "query_id": "Q8",
+      "database": "OpenAlex",
+      "query": "\"smart greenhouse\" control IoT network",
+      "records_returned": 25
+    },
+    {
+      "query_id": "Q9",
+      "database": "OpenAlex",
+      "query": "\"precision irrigation\" IoT control LoRaWAN",
+      "records_returned": 25
+    },
+    {
+      "query_id": "Q10",
+      "database": "OpenAlex",
+      "query": "\"closed-loop\" irrigation control IoT agriculture",
+      "records_returned": 25
+    }
+  ],
+  "counts": {
+    "raw_identified_total": 627,
+    "unique_after_dedup": 424,
+    "duplicates_removed": 203,
+    "included_core_verified": 64,
+    "candidate_core_after_automated_pnce": 123,
+    "excluded_after_screening": 237,
+    "included_or_candidate_total": 187
+  }
+}

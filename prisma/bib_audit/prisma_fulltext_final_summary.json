@@ -1,0 +1,13 @@
+{
+  "candidate_total": 123,
+  "included_after_fulltext": 56,
+  "excluded_after_fulltext": 67,
+  "excluded_unretrievable": 14,
+  "status_counts": {
+    "include_after_fulltext_metadata": 54,
+    "exclude_fulltext": 53,
+    "exclude_fulltext_unretrievable": 14,
+    "include_after_crossref_metadata": 1,
+    "include_after_landing_text": 1
+  }
+}

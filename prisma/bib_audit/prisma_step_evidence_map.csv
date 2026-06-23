@@ -1,0 +1,7 @@
+step,input,output,evidence_file,verification
+1_identification_query_log,,627,prisma_rebuilt_query_log.json,"records_returned per query, database, exact search string"
+2_raw_records,627,627,prisma_raw_all_sources_rebuilt.csv,"one row per raw hit with raw_id, channel, query_id, title, year, DOI/URL when available"
+3_deduplication,627,424,prisma_deduplication_evidence.csv,duplicate rows map to retained raw_id and decision rule DOI/title similarity
+4_title_abstract_screening,424,187,prisma_screening_decisions_evidence.csv,each unique source has PNCE status and exclusion/inclusion reason
+5_eligibility_fulltext_queue,187,64,prisma_fulltext_eligibility_queue.csv,candidate_core items separated from included_core; requires full-text check before quantitative reuse
+6_included_core_verified,64,64,lvtn_68_clean_corpus_FINAL.csv + core68_source_audit_trail.csv,verified DOI/metadata corpus; note 64 unique records after duplicate DOI detection
