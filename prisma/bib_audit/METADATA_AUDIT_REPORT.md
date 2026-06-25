@@ -1,8 +1,8 @@
-# LVTN 68-Study Metadata Audit Report
+# LVTN Metadata Audit Report (original 68-record seed → 64 unique core)
 
 ## Purpose
 
-This audit verifies the 68 core works listed in `LVTN/Chapter/phuluc.tex` using non-LLM bibliographic metadata sources. The goal is to prevent hallucinated BibTeX and identify which records need manual verification before thesis/paper submission.
+This audit verifies the original **68-record seed** reconstruction (later reduced to the **64 unique core works** now listed in `LVTN/Chapter/phuluc.tex`; see the reconciliation note under *Summary*) using non-LLM bibliographic metadata sources. The goal is to prevent hallucinated BibTeX and identify which records need manual verification before thesis/paper submission.
 
 ## Method
 
@@ -27,6 +27,13 @@ These outputs were also copied to:
 `Paper_LaTeX/Supplementary/bib_audit/`
 
 ## Summary
+
+> **Note (final reconciliation).** The figures in this section describe the
+> 2026-05-01 metadata audit of the original **68-record seed** reconstruction.
+> A later duplicate check found four duplicate DOI/title pairs (S33≡S32, S68≡S35,
+> S53≡S45, S54≡S47), which were removed to yield the **64 unique core works** used
+> in the thesis and in `prisma_step_evidence_map.csv`. The seed-level counts below
+> are retained as the historical audit record; they are not the final corpus size.
 
 - Total appendix seed records: 68
 - High-confidence matches: 44

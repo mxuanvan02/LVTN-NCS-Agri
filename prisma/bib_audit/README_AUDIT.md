@@ -4,9 +4,9 @@ This folder contains the verification package for the thesis systematic review o
 
 ## Purpose
 
-The audit package allows a reviewer to trace every reported PRISMA number back to machine-readable files. The key flow is:
+The audit package allows a reviewer to trace every reported PRISMA number back to machine-readable files. The canonical flow used in the thesis is:
 
-`627 raw records -> 424 unique sources -> 123 eligibility candidates -> 120 included core sources`
+`627 raw records -> 424 unique sources -> 187 sources after title/abstract screening -> 64 included core works`
 
 The tools and AI-assisted steps were used only for search support, metadata normalization, duplicate detection, extraction of traceable evidence, table generation, and consistency checks. They were not used as scientific evidence and did not replace the author's final academic judgement.
 
@@ -18,10 +18,8 @@ The tools and AI-assisted steps were used only for search support, metadata norm
 | 424 unique sources | `prisma_unique_screening_rebuilt.csv` | Count unique rows after deduplication; compare with `prisma_deduplication_evidence.csv`. |
 | 203 duplicate/fragment records | `prisma_deduplication_evidence.csv` | Count duplicate rows and inspect the retained record and matching rule. |
 | 237 excluded at title/abstract screening | `prisma_screening_decisions_evidence.csv` | Filter `decision=exclude` or the equivalent exclude status/reason fields. |
-| 123 eligibility candidates | `prisma_fulltext_final_decisions.csv` | Count all rows in the final full-text/metadata decision table. |
-| 67 excluded at eligibility | `prisma_fulltext_final_decisions.csv` | Filter `final_decision=exclude`. |
-| 56 newly included after eligibility | `prisma_fulltext_final_decisions.csv` | Filter `final_decision=include`. |
-| 120 final core sources | `prisma_fulltext_final_summary.json` and `Chapter/phuluc.tex` | Verify 64 prior verified unique sources + 56 newly included sources. |
+| 187 sources entering eligibility | `prisma_fulltext_eligibility_queue.csv` | Count rows; the `status` column separates `included_core` (64) from `candidate_core` (123, requiring further full-text verification before reuse). |
+| 64 included core works | `lvtn_68_clean_corpus_FINAL.csv` and `core68_source_audit_trail.csv` | Count unique rows (S-id may contain gaps after duplicate DOI/title resolution; see note below). |
 
 ## Main files
 
@@ -30,10 +28,11 @@ The tools and AI-assisted steps were used only for search support, metadata norm
 - `prisma_deduplication_evidence.csv`: duplicate/fragment evidence and retained record IDs.
 - `prisma_unique_screening_rebuilt.csv`: unique source list with screening status.
 - `prisma_screening_decisions_evidence.csv`: title/abstract screening decisions and reason codes.
-- `prisma_step_evidence_map.csv`: mapping from PRISMA steps to evidence files.
-- `prisma_fulltext_final_decisions.csv`: final eligibility decision for 123 candidates.
-- `prisma_fulltext_final_summary.json`: final summary after eligibility.
-- `core68_source_audit_trail.csv`: prior verified core set audit trail; four duplicate DOI/title entries were resolved, leaving 64 unique prior core sources.
+- `prisma_fulltext_eligibility_queue.csv`: the 187 sources entering eligibility, with `included_core` (64) separated from `candidate_core` (123).
+- `prisma_step_evidence_map.csv`: mapping from PRISMA steps to evidence files (canonical flow).
+- `lvtn_68_clean_corpus_FINAL.csv` / `lvtn_68_clean_corpus_FINAL.bib`: the 64 verified core works (filename retains the `68` prefix from earlier seed audits; current row count is 64).
+- `core68_source_audit_trail.csv`: prior verified core set audit trail; four duplicate DOI/title pairs were resolved, leaving 64 unique core sources. S-id gaps (S33, S53, S54, S68) honestly reflect the removed duplicates.
+- `lvtn_68_coding_per_paper.csv`: PNCE coding for the 64 core works.
 
 ## Search strategy summary
 

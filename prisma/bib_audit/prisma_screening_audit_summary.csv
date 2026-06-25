@@ -1,5 +1,0 @@
-﻿stage,input_n,excluded_n,output_n,decision_rule,exclusion_reason,evidence_file
-Identification,135,0,135,Tìm kiếm học thuật giai đoạn 2015-2025 theo nhóm từ khóa PNCE,Chưa loại ở bước xác định,Chapter/noidung_chap2.tex; paper_list.txt (vết làm việc rộng)
-Deduplication and cleaning,135,20,115,"Gộp lặp, loại nguồn không học thuật hoặc ngoài phạm vi rõ ràng","Tin tức, blog, trang thương mại, bản ghi trùng/phân mảnh",Chapter/noidung_chap2.tex
-Full-text/eligibility screening,115,47,68,"Áp dụng PNCE, bình duyệt, phạm vi tưới/nhà kính và dữ liệu định lượng",15 không đủ bình duyệt/thông tin phương pháp; 32 thiếu dữ liệu định lượng hoặc không thể mã hóa PNCE,Chapter/noidung_chap2.tex; bib_audit/lvtn_68_clean_corpus_FINAL.csv
-Included,68,0,68,Đưa vào tổng quan và phân tích theo Chương 3,Không áp dụng,Chapter/phuluc.tex; bib_audit/lvtn_68_clean_corpus_FINAL.csv
