@@ -68,6 +68,15 @@
     "included_core_verified": 64,
     "candidate_core_after_automated_pnce": 123,
     "excluded_after_screening": 237,
-    "included_or_candidate_total": 187
+    "included_or_candidate_total": 187,
+    "query_records_returned_total": 246,
+    "raw_by_source_channel": {
+      "existing_core68": 68,
+      "OpenAlex": 246,
+      "local_paper_list": 176,
+      "local_cleaned_papers": 137
+    },
+    "note_on_raw_identified_total": "raw_identified_total=627 is the merged identification set across three channels, not the number of records returned by the 10 OpenAlex queries. The queries returned 246 records (query_records_returned_total); the remaining records come from the previously read local paper lists and the prior verified core set. See raw_by_source_channel for the exact split.",
+    "core_set_provenance": "No core source originates from Q1-Q10. All final core sources carry source_channel=existing_core68. The queries therefore served as a coverage check, not as the generator of the core set."
   }
 }

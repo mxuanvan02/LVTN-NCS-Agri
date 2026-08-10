@@ -19,3 +19,10 @@ Thumbs.db
 *.log
 *.tmp
 tmp_archive_*/
+
+# Full texts and local extraction caches (never publish)
+prisma/bib_audit/fulltext_cache/
+prisma/bib_audit/fulltext_audit_batches/
+prisma/bib_audit/pnce_recode/evidence_candidates.json
+prisma/bib_audit/pnce_recode/evidence_digest.json
+prisma/bib_audit/pnce_recode/probe_matrix.json

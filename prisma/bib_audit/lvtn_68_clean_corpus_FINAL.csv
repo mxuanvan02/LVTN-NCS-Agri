@@ -8,11 +8,11 @@ S06,Using the Internet of Things to promote alternate wetting and drying irrigat
 S07,Reinforcement Learning versus Model Predictive Control on greenhouse climate control,2023,Computers and Electronics in Agriculture,10.1016/j.compag.2023.108372,verified replacement,caceres2023mpc
 S08,Reinforcement learning-based model predictive control for greenhouse climate control,2025,Smart Agricultural Technology,10.1016/j.atech.2024.100751,verified original seed,
 S09,Efficient energy management and temperature control of a high-tech greenhouse using an improved data-driven model predictive control,2025,Energy Conversion and Management: X,10.1016/j.ecmx.2025.100939,verified original seed,
-S10,Predictive control for greenhouse temperature and humidity and energy optimization by improved NMPC objective function algorithm,2024,International Journal of Agricultural and Biological Engineering,10.25165/j.ijabe.20241705.8241,verified original seed,
+S10,Predictive control for greenhouse temperature and humidity and energy optimization by improved NMPC objective function algorithm,2024,International Journal of Agricultural and Biological Engineering,10.25165/j.ijabe.20241705.8241,verified original seed,wang2024predictive
 S11,Learning-based multi-agent MPC for irrigation scheduling,2024,Control Engineering Practice,10.1016/j.conengprac.2024.105908,verified original seed,
 S12,Robust sample-based model predictive control of a greenhouse system with parametric uncertainty,2022,IFAC-PapersOnLine,10.1016/j.ifacol.2022.11.135,verified original seed,
 S13,Smart Irrigation System Considering Optimal Energy Management Based on Model Predictive Control (MPC),2022,Applied Sciences,10.3390/app12094235,verified original seed,
-S14,Robust model predictive control for greenhouse temperature based on particle swarm optimization,2018,Information Processing in Agriculture,10.1016/j.inpa.2018.04.003,verified original seed,
+S14,Robust model predictive control for greenhouse temperature based on particle swarm optimization,2018,Information Processing in Agriculture,10.1016/j.inpa.2018.04.003,verified original seed,Chen_2018
 S15,Event-Triggered Control for Scalar Networked Systems with Random Delays,2025,2025 6th International Conference on Artificial Intelligence and Electromechanical Automation (AIEA),10.1109/aiea66061.2025.11160534,verified original seed,
 S16,Energy-Efficient Wireless Communication Strategy for Precision Agriculture Irrigation Control,2021,Sensors,10.3390/s21165541,verified original seed,
 S17,Self-triggered Control with Energy Harvesting Sensor Nodes,2023,ACM Transactions on Cyber-Physical Systems,10.1145/3597311,verified original seed,
@@ -31,7 +31,6 @@ S29,Stability of output event-based control systems through quadratic trigger fu
 S30,A Learning Approach for Joint Design of Event-Triggered Control and Power-Efficient Resource Allocation,2022,IEEE Transactions on Vehicular Technology,10.1109/tvt.2022.3159739,verified original seed,
 S31,Intelligent Condensation Irrigation System Based on Internet of Things,2023,"2023 5th International Conference on Intelligent Control, Measurement and Signal Processing (ICMSP)",10.1109/icmsp58539.2023.10170873,verified original seed,
 S32,"Control, And Monitoring System Design Cultivation of Lettude Using Method Aeroponics Based on Smart Farming",2025,"2025 19th International Conference on Telecommunication Systems, Services, and Applications (TSSA)",10.1109/tssa68467.2025.11303843,verified original seed,
-S33,"Control, And Monitoring System Design Cultivation of Lettude Using Method Aeroponics Based on Smart Farming",2025,"2025 19th International Conference on Telecommunication Systems, Services, and Applications (TSSA)",10.1109/tssa68467.2025.11303843,verified original seed,
 S34,Design and performance of nutrient dosing control system for hydroponic chilli plant using fuzzy logic controller,2025,"Journal of Mechatronics, Electrical Power, and Vehicular Technology",10.55981/j.mev.2025.910,verified original seed,
 S35,Smart greenhouse construction and irrigation control system for optimal Brassica Juncea development,2023,Plos one,10.1371/journal.pone.0292971,verified replacement,huynh2023smart
 S36,Design and Development of IoT Smart Drip Irrigation and Fertigation Prototype for Small and Medium Scale Farmers. Acase Study of Tomato Farmers in Tanzania,2025,Journal of The Institution of Engineers (India): Series A,10.1007/s40030-024-00857-7,verified original seed,
@@ -51,8 +50,6 @@ S49,Wireless sensor networks for greenhouse climate and plant condition assessme
 S50,WIRELESS SENSOR NETWORK BASED REMOTE DRIP IRRIGATION SYSTEM,2018,Mühendislik Bilimleri ve Tasarım Dergisi,10.21923/jesd.443576,verified original seed,
 S51,IoT Based Smart Automated Agriculture and Real Time Monitoring System,2021,2021 2nd International Conference on Smart Electronics and Communication (ICOSEC),10.1109/icosec51865.2021.9591855,verified original seed,
 S52,"Design, Implementation, and Empirical Validation of an IoT Smart Irrigation System for Fog Computing Applications Based on LoRa and LoRaWAN Sensor Nodes",2020,Sensors,10.3390/s20236865,verified original seed,
-S53,Research and Development of an IoT Smart Irrigation System for Farmland Based on LoRa and Edge Computing,2025,Agronomy,10.3390/agronomy15020366,verified original seed,
-S54,"Hybrid LoRaWAN–MQTT Architecture for Portable Smart Greenhouses: Cross-Layer Validation of Latency, Energy, and ADMR Trade-Offs",2025,IEEE Access,10.1109/access.2025.3643617,verified original seed,
 S55,Design of IoT Monitoring System Based on LoRaWAN Architecture for Smart Green House,2022,IOP Conference Series: Earth and Environmental Science,10.1088/1755-1315/1012/1/012090,verified original seed,
 S56,Research and Design of Greenhouse Environment Monitoring System Based on NB-IoT,2021,2021 33rd Chinese Control and Decision Conference (CCDC),10.1109/ccdc52312.2021.9601377,verified original seed,
 S57,Smart Agriculture: Automated Controlled Monitoring System using Internet of Things,2019,International Journal of Recent Technology and Engineering (IJRTE),10.35940/ijrte.c6538.098319,verified original seed,
@@ -66,4 +63,3 @@ S64,Context-aware control and monitoring system with IoT and cloud support,2019,
 S65,"Stability analysis for networked control systems with sampling, transmission protocols and input delays",2021,Nonlinear Analysis: Hybrid Systems,10.1016/j.nahs.2020.100974,verified original seed,
 S66,Robust Wireless Sensor and Actuator Networks for Networked Control Systems,2019,Sensors,10.3390/s19071535,verified original seed,
 S67,Smart &amp; Green: An Internet-of-Things Framework for Smart Irrigation,2019,Sensors,10.3390/s20010190,verified original seed,
-S68,Smart greenhouse construction and irrigation control system for optimal Brassica Juncea development,2023,PLOS ONE,10.1371/journal.pone.0292971,verified original seed,

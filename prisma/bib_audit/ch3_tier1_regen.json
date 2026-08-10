@@ -1,0 +1,789 @@
+{
+  "n_tier1": 33,
+  "n_tier2": 31,
+  "year": {
+    "2024_2025": 14,
+    "pre2015": 1,
+    "2015_2023": 18
+  },
+  "year_pct": {
+    "2024_2025": 42.4,
+    "pre2015": 3.0,
+    "2015_2023": 54.5
+  },
+  "counts": {
+    "p1_application": {
+      "greenhouse_microclimate": 12,
+      "irrigation_outdoor": 11,
+      "not_stated": 7,
+      "hydroponic_cea": 2,
+      "ncs_generic_nonagricultural": 1
+    },
+    "n1_protocol": {
+      "none_no_network": 9,
+      "LoRa_LoRaWAN": 8,
+      "WiFi": 7,
+      "ZigBee_802154": 5,
+      "NB_IoT_cellular": 2,
+      "mixed": 2
+    },
+    "c1_strategy": {
+      "MPC": 9,
+      "Fuzzy": 8,
+      "none_monitoring_only": 5,
+      "on_off_threshold": 4,
+      "not_stated": 3,
+      "RL_ML": 2,
+      "optimal_control": 1,
+      "ETC_event_triggered": 1
+    },
+    "c2_trigger": {
+      "not_stated": 22,
+      "time_triggered": 5,
+      "self_triggered": 3,
+      "manual_remote": 2,
+      "event_triggered": 1
+    },
+    "c3_architecture": {
+      "cloud": 11,
+      "not_stated": 7,
+      "standalone_embedded": 7,
+      "simulation_only": 5,
+      "hybrid_cloud_edge": 3
+    },
+    "evidence_type": {
+      "simulation_only": 14,
+      "lab_prototype_or_HIL": 13,
+      "field_deployment": 3,
+      "greenhouse_or_plot_experiment": 2,
+      "mixed_experiment_and_simulation": 1
+    },
+    "comparator_present": {
+      "none": 21,
+      "within_model_comparison": 6,
+      "concurrent_experimental": 6
+    },
+    "rob_overall": {
+      "high": 21,
+      "some_concerns": 12
+    },
+    "record_role": {
+      "analytical_primary": 27,
+      "technical_support_primary": 6
+    }
+  },
+  "pct": {
+    "p1_application": {
+      "greenhouse_microclimate": 36.4,
+      "irrigation_outdoor": 33.3,
+      "not_stated": 21.2,
+      "hydroponic_cea": 6.1,
+      "ncs_generic_nonagricultural": 3.0
+    },
+    "n1_protocol": {
+      "none_no_network": 27.3,
+      "LoRa_LoRaWAN": 24.2,
+      "WiFi": 21.2,
+      "ZigBee_802154": 15.2,
+      "NB_IoT_cellular": 6.1,
+      "mixed": 6.1
+    },
+    "c1_strategy": {
+      "MPC": 27.3,
+      "Fuzzy": 24.2,
+      "none_monitoring_only": 15.2,
+      "on_off_threshold": 12.1,
+      "not_stated": 9.1,
+      "RL_ML": 6.1,
+      "optimal_control": 3.0,
+      "ETC_event_triggered": 3.0
+    },
+    "c2_trigger": {
+      "not_stated": 66.7,
+      "time_triggered": 15.2,
+      "self_triggered": 9.1,
+      "manual_remote": 6.1,
+      "event_triggered": 3.0
+    },
+    "c3_architecture": {
+      "cloud": 33.3,
+      "not_stated": 21.2,
+      "standalone_embedded": 21.2,
+      "simulation_only": 15.2,
+      "hybrid_cloud_edge": 9.1
+    },
+    "evidence_type": {
+      "simulation_only": 42.4,
+      "lab_prototype_or_HIL": 39.4,
+      "field_deployment": 9.1,
+      "greenhouse_or_plot_experiment": 6.1,
+      "mixed_experiment_and_simulation": 3.0
+    },
+    "comparator_present": {
+      "none": 63.6,
+      "within_model_comparison": 18.2,
+      "concurrent_experimental": 18.2
+    },
+    "rob_overall": {
+      "high": 63.6,
+      "some_concerns": 36.4
+    },
+    "record_role": {
+      "analytical_primary": 81.8,
+      "technical_support_primary": 18.2
+    }
+  },
+  "ids": {
+    "p1_application": {
+      "greenhouse_microclimate": [
+        "S02",
+        "S03",
+        "S05",
+        "S07",
+        "S08",
+        "S10",
+        "S34",
+        "S35",
+        "S40",
+        "S58",
+        "S61",
+        "S63"
+      ],
+      "irrigation_outdoor": [
+        "S06",
+        "S13",
+        "S16",
+        "S36",
+        "S38",
+        "S41",
+        "S44",
+        "S45",
+        "S52",
+        "S59",
+        "S67"
+      ],
+      "not_stated": [
+        "S20",
+        "S30",
+        "S43",
+        "S48",
+        "S55",
+        "S60",
+        "S66"
+      ],
+      "hydroponic_cea": [
+        "S42",
+        "S57"
+      ],
+      "ncs_generic_nonagricultural": [
+        "S18"
+      ]
+    },
+    "n1_protocol": {
+      "none_no_network": [
+        "S03",
+        "S05",
+        "S07",
+        "S08",
+        "S10",
+        "S13",
+        "S18",
+        "S20",
+        "S58"
+      ],
+      "LoRa_LoRaWAN": [
+        "S06",
+        "S38",
+        "S41",
+        "S45",
+        "S52",
+        "S55",
+        "S59",
+        "S67"
+      ],
+      "WiFi": [
+        "S02",
+        "S34",
+        "S35",
+        "S36",
+        "S43",
+        "S44",
+        "S57"
+      ],
+      "ZigBee_802154": [
+        "S16",
+        "S40",
+        "S60",
+        "S61",
+        "S66"
+      ],
+      "NB_IoT_cellular": [
+        "S30",
+        "S42"
+      ],
+      "mixed": [
+        "S48",
+        "S63"
+      ]
+    },
+    "c1_strategy": {
+      "MPC": [
+        "S03",
+        "S07",
+        "S08",
+        "S10",
+        "S13",
+        "S18",
+        "S20",
+        "S61",
+        "S66"
+      ],
+      "Fuzzy": [
+        "S34",
+        "S35",
+        "S38",
+        "S41",
+        "S44",
+        "S45",
+        "S48",
+        "S52"
+      ],
+      "none_monitoring_only": [
+        "S55",
+        "S57",
+        "S60",
+        "S63",
+        "S67"
+      ],
+      "on_off_threshold": [
+        "S06",
+        "S36",
+        "S40",
+        "S42"
+      ],
+      "not_stated": [
+        "S43",
+        "S58",
+        "S59"
+      ],
+      "RL_ML": [
+        "S02",
+        "S30"
+      ],
+      "optimal_control": [
+        "S05"
+      ],
+      "ETC_event_triggered": [
+        "S16"
+      ]
+    },
+    "c2_trigger": {
+      "not_stated": [
+        "S02",
+        "S03",
+        "S05",
+        "S07",
+        "S08",
+        "S10",
+        "S13",
+        "S34",
+        "S36",
+        "S38",
+        "S41",
+        "S42",
+        "S44",
+        "S48",
+        "S52",
+        "S55",
+        "S57",
+        "S58",
+        "S60",
+        "S61",
+        "S66",
+        "S67"
+      ],
+      "time_triggered": [
+        "S40",
+        "S43",
+        "S45",
+        "S59",
+        "S63"
+      ],
+      "self_triggered": [
+        "S16",
+        "S18",
+        "S20"
+      ],
+      "manual_remote": [
+        "S06",
+        "S35"
+      ],
+      "event_triggered": [
+        "S30"
+      ]
+    },
+    "c3_architecture": {
+      "cloud": [
+        "S02",
+        "S06",
+        "S35",
+        "S36",
+        "S38",
+        "S42",
+        "S43",
+        "S48",
+        "S52",
+        "S63",
+        "S67"
+      ],
+      "not_stated": [
+        "S05",
+        "S10",
+        "S20",
+        "S55",
+        "S58",
+        "S60",
+        "S66"
+      ],
+      "standalone_embedded": [
+        "S13",
+        "S16",
+        "S34",
+        "S40",
+        "S44",
+        "S57",
+        "S61"
+      ],
+      "simulation_only": [
+        "S03",
+        "S07",
+        "S08",
+        "S18",
+        "S30"
+      ],
+      "hybrid_cloud_edge": [
+        "S41",
+        "S45",
+        "S59"
+      ]
+    },
+    "evidence_type": {
+      "simulation_only": [
+        "S03",
+        "S07",
+        "S08",
+        "S10",
+        "S13",
+        "S16",
+        "S18",
+        "S20",
+        "S30",
+        "S58",
+        "S60",
+        "S63",
+        "S66",
+        "S67"
+      ],
+      "lab_prototype_or_HIL": [
+        "S34",
+        "S35",
+        "S36",
+        "S38",
+        "S40",
+        "S42",
+        "S43",
+        "S44",
+        "S48",
+        "S55",
+        "S57",
+        "S59",
+        "S61"
+      ],
+      "field_deployment": [
+        "S06",
+        "S41",
+        "S45"
+      ],
+      "greenhouse_or_plot_experiment": [
+        "S02",
+        "S05"
+      ],
+      "mixed_experiment_and_simulation": [
+        "S52"
+      ]
+    },
+    "comparator_present": {
+      "none": [
+        "S02",
+        "S05",
+        "S13",
+        "S20",
+        "S30",
+        "S34",
+        "S35",
+        "S36",
+        "S42",
+        "S43",
+        "S45",
+        "S48",
+        "S52",
+        "S55",
+        "S57",
+        "S58",
+        "S59",
+        "S60",
+        "S61",
+        "S63",
+        "S66"
+      ],
+      "within_model_comparison": [
+        "S03",
+        "S08",
+        "S10",
+        "S16",
+        "S18",
+        "S67"
+      ],
+      "concurrent_experimental": [
+        "S06",
+        "S07",
+        "S38",
+        "S40",
+        "S41",
+        "S44"
+      ]
+    },
+    "rob_overall": {
+      "high": [
+        "S02",
+        "S03",
+        "S05",
+        "S10",
+        "S13",
+        "S18",
+        "S20",
+        "S34",
+        "S35",
+        "S36",
+        "S38",
+        "S40",
+        "S43",
+        "S45",
+        "S48",
+        "S55",
+        "S57",
+        "S60",
+        "S61",
+        "S63",
+        "S67"
+      ],
+      "some_concerns": [
+        "S06",
+        "S07",
+        "S08",
+        "S16",
+        "S30",
+        "S41",
+        "S42",
+        "S44",
+        "S52",
+        "S58",
+        "S59",
+        "S66"
+      ]
+    },
+    "record_role": {
+      "analytical_primary": [
+        "S02",
+        "S03",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S10",
+        "S13",
+        "S16",
+        "S34",
+        "S35",
+        "S36",
+        "S38",
+        "S40",
+        "S41",
+        "S42",
+        "S43",
+        "S44",
+        "S45",
+        "S48",
+        "S52",
+        "S55",
+        "S58",
+        "S59",
+        "S60",
+        "S63",
+        "S67"
+      ],
+      "technical_support_primary": [
+        "S18",
+        "S20",
+        "S30",
+        "S57",
+        "S61",
+        "S66"
+      ]
+    }
+  },
+  "groups": {
+    "mpc": [
+      "msaad2025rl",
+      "caceres2023mpc",
+      "key2025reinforcement",
+      "wang2024predictive",
+      "key2022smart",
+      "key2024sensitivity",
+      "key2024self",
+      "chang2015using",
+      "park2019robust"
+    ],
+    "etc_stc": [
+      "Lozoya_2021"
+    ],
+    "rl_ml": [
+      "platero2024enhancing",
+      "termehchi2022learning"
+    ],
+    "fuzzy_pid": [
+      "pratama2025design",
+      "huynh2023smart",
+      "artetxe2024fuzzy",
+      "zhang2025research",
+      "tang2025design",
+      "zhang2025lora",
+      "sagali2025lora",
+      "froiz2020lorawan"
+    ],
+    "optimal_control": [
+      "vanhenten1994greenhouse"
+    ],
+    "threshold": [
+      "pham2021using",
+      "key2025design",
+      "li2015system",
+      "islam2025sustainable"
+    ],
+    "monitoring_only": [
+      "key2022design",
+      "rao2019smart",
+      "key2017monitoring",
+      "key2019layered",
+      "key2019smart"
+    ],
+    "strategy_not_stated": [
+      "visconti2020solar",
+      "ferraz2020wireless",
+      "kamienski2019smart"
+    ],
+    "lorawan": [
+      "pham2021using",
+      "artetxe2024fuzzy",
+      "zhang2025research",
+      "zhang2025lora",
+      "froiz2020lorawan",
+      "key2022design",
+      "kamienski2019smart",
+      "key2019smart"
+    ],
+    "self_triggered_trigger": [
+      "Lozoya_2021",
+      "key2024sensitivity",
+      "key2024self"
+    ],
+    "field_or_plot_evidence": [
+      "platero2024enhancing",
+      "vanhenten1994greenhouse",
+      "pham2021using",
+      "zhang2025research",
+      "zhang2025lora",
+      "froiz2020lorawan"
+    ],
+    "simulation_only_evidence": [
+      "msaad2025rl",
+      "caceres2023mpc",
+      "key2025reinforcement",
+      "wang2024predictive",
+      "key2022smart",
+      "Lozoya_2021",
+      "key2024sensitivity",
+      "key2024self",
+      "termehchi2022learning",
+      "ferraz2020wireless",
+      "key2017monitoring",
+      "key2019layered",
+      "park2019robust",
+      "key2019smart"
+    ],
+    "prototype_evidence": [
+      "pratama2025design",
+      "huynh2023smart",
+      "key2025design",
+      "artetxe2024fuzzy",
+      "li2015system",
+      "islam2025sustainable",
+      "visconti2020solar",
+      "tang2025design",
+      "sagali2025lora",
+      "key2022design",
+      "rao2019smart",
+      "kamienski2019smart",
+      "chang2015using"
+    ]
+  },
+  "tier2_reasons": {
+    "fulltext_not_retrieved": 29,
+    "methodological_context_source": 1,
+    "retrieved_but_secondary_review": 1
+  },
+  "tier2_ids": {
+    "fulltext_not_retrieved": [
+      "S01",
+      "S04",
+      "S09",
+      "S11",
+      "S12",
+      "S14",
+      "S15",
+      "S17",
+      "S19",
+      "S21",
+      "S23",
+      "S24",
+      "S25",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S31",
+      "S32",
+      "S37",
+      "S39",
+      "S47",
+      "S49",
+      "S50",
+      "S51",
+      "S56",
+      "S62",
+      "S64",
+      "S65"
+    ],
+    "methodological_context_source": [
+      "S22"
+    ],
+    "retrieved_but_secondary_review": [
+      "S46"
+    ]
+  },
+  "tier2_keys": {
+    "fulltext_not_retrieved": [
+      "Ghiat_2025",
+      "yue2014event",
+      "key2025efficient",
+      "Agyeman_2024",
+      "Boersma_2022",
+      "Chen_2018",
+      "Tan_2025",
+      "Stricker_2023",
+      "chen2025self",
+      "Wu_2013",
+      "qiu2025datadriven",
+      "huang2025event",
+      "yang2024disturbance",
+      "Di_Ferdinando_2025",
+      "su2025observer",
+      "miskowicz2003event",
+      "Aranda_Escolastico_2015",
+      "key2023intelligent",
+      "fhaizal2025control",
+      "key2025iot",
+      "pawlowski2017evaluation",
+      "Perdana_2025",
+      "ferentinos2017wireless",
+      "patle2018wireless",
+      "key2021iot",
+      "key2021research",
+      "ibrahim2018high",
+      "dobrescu2019context",
+      "lozoya2021stability"
+    ],
+    "methodological_context_source": [
+      "peng2018survey"
+    ],
+    "retrieved_but_secondary_review": [
+      "singh2020leveraging"
+    ]
+  },
+  "id2key": {
+    "S01": "Ghiat_2025",
+    "S02": "platero2024enhancing",
+    "S03": "msaad2025rl",
+    "S04": "yue2014event",
+    "S05": "vanhenten1994greenhouse",
+    "S06": "pham2021using",
+    "S07": "caceres2023mpc",
+    "S08": "key2025reinforcement",
+    "S09": "key2025efficient",
+    "S10": "wang2024predictive",
+    "S11": "Agyeman_2024",
+    "S12": "Boersma_2022",
+    "S13": "key2022smart",
+    "S14": "Chen_2018",
+    "S15": "Tan_2025",
+    "S16": "Lozoya_2021",
+    "S17": "Stricker_2023",
+    "S18": "key2024sensitivity",
+    "S19": "chen2025self",
+    "S20": "key2024self",
+    "S21": "Wu_2013",
+    "S22": "peng2018survey",
+    "S23": "qiu2025datadriven",
+    "S24": "huang2025event",
+    "S25": "yang2024disturbance",
+    "S26": "Di_Ferdinando_2025",
+    "S27": "su2025observer",
+    "S28": "miskowicz2003event",
+    "S29": "Aranda_Escolastico_2015",
+    "S30": "termehchi2022learning",
+    "S31": "key2023intelligent",
+    "S32": "fhaizal2025control",
+    "S34": "pratama2025design",
+    "S35": "huynh2023smart",
+    "S36": "key2025design",
+    "S37": "key2025iot",
+    "S38": "artetxe2024fuzzy",
+    "S39": "pawlowski2017evaluation",
+    "S40": "li2015system",
+    "S41": "zhang2025research",
+    "S42": "islam2025sustainable",
+    "S43": "visconti2020solar",
+    "S44": "tang2025design",
+    "S45": "zhang2025lora",
+    "S46": "singh2020leveraging",
+    "S47": "Perdana_2025",
+    "S48": "sagali2025lora",
+    "S49": "ferentinos2017wireless",
+    "S50": "patle2018wireless",
+    "S51": "key2021iot",
+    "S52": "froiz2020lorawan",
+    "S55": "key2022design",
+    "S56": "key2021research",
+    "S57": "rao2019smart",
+    "S58": "ferraz2020wireless",
+    "S59": "kamienski2019smart",
+    "S60": "key2017monitoring",
+    "S61": "chang2015using",
+    "S62": "ibrahim2018high",
+    "S63": "key2019layered",
+    "S64": "dobrescu2019context",
+    "S65": "lozoya2021stability",
+    "S66": "park2019robust",
+    "S67": "key2019smart"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "S06": {
+    "kind": "pdf",
+    "url": "https://link.springer.com/content/pdf/10.1007/s13593-021-00705-z.pdf?error=cookies_not_supported&code=7fd2cb19-8fbd-4158-a60e-46005c4e9551",
+    "route": "openalex_location",
+    "pages": 9,
+    "chars": 54710
+  },
+  "S18": {
+    "kind": "pdf",
+    "url": "https://d-nb.info/1372381732/34",
+    "route": "openalex_location",
+    "pages": 10,
+    "chars": 74856
+  },
+  "S40": {
+    "kind": "pdf",
+    "url": "https://inria.hal.science/hal-01420287/file/978-3-319-19620-6_76_Chapter.pdf",
+    "route": "openaire",
+    "pages": 14,
+    "chars": 26953
+  },
+  "S63": {
+    "kind": "pdf",
+    "url": "https://link.springer.com/content/pdf/10.1007/s42452-019-0227-8.pdf?error=cookies_not_supported&code=8105d0ce-be73-4658-adc2-e07c622a0906",
+    "route": "openalex_location",
+    "pages": 12,
+    "chars": 61200
+  }
+}

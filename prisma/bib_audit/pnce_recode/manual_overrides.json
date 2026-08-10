@@ -1,0 +1,71 @@
+{
+  "_note": "Human-adjudicated overrides on top of the rule-based recode. Each entry records the field, the corrected value, the reason the rule failed, and a verbatim body-text quote with its locator. Rule-derived values are marked coding_basis=rule in the output; these are marked coding_basis=adjudicated.",
+  "overrides": {
+    "S02": {
+      "c1_strategy": {
+        "value": "RL_ML",
+        "rule_error": "First-match rule picked 'optimal control' from a related-work sentence describing Kazmi et al., not the method of this paper.",
+        "quote": "In the model presented in this work, the agent performs control actions to adjust the set-points, ensuring that the internal conditions of the greenhouse stay within the predefined maximum and minimum limits.",
+        "locator": "sec. 3 Materials and Methods (RL agent description)"
+      },
+      "evidence_type": {
+        "value": "greenhouse_or_plot_experiment",
+        "rule_error": "No evidence probe matched, so the default simulation_only was emitted despite a described transfer to a real automated greenhouse.",
+        "quote": "The expertise of this technician was crucial in transferring the RL model to a real-world automated greenhouse equipped with IoT technology.",
+        "locator": "sec. 3.1 (automated greenhouse with IoT)"
+      }
+    },
+    "S06": {
+      "c1_strategy": {
+        "value": "on_off_threshold",
+        "rule_error": "No strategy keyword appears in the body; the control rule is stated as a water-level threshold rather than by a named control-theory term.",
+        "quote": "it measured every 5 min the water level from 15 cm below ground up to 5 cm above ground ... AWD with a safe groundwater threshold of -15 cm",
+        "locator": "sec. 2.1.1 and sec. 3.3; p.4/9 and p.7/9"
+      },
+      "c2_trigger": {
+        "value": "manual_remote",
+        "rule_error": "Trigger probe found no match; irrigation is initiated by the farmer from the application after remote water-level monitoring.",
+        "quote": "individually controllable and automatically controlled pump operations",
+        "locator": "sec. 2.1 / sec. 3.1 (Can Tho site description)"
+      }
+    },
+    "S36": {
+      "c1_strategy": {
+        "value": "on_off_threshold",
+        "rule_error": "Strategy probe found no named controller; actuation is described as set-point/threshold switching of pump and fertiliser.",
+        "quote": "the system was expected to activate the irrigation pump when soil moisture dropped below the set threshold",
+        "locator": "sec. Functionality Tests; printed p.388"
+      }
+    },
+    "S40": {
+      "c1_strategy": {
+        "value": "on_off_threshold",
+        "rule_error": "Strategy probe matched only the word 'monitoring'; the body states relay switching against temperature/humidity thresholds.",
+        "quote": "four different alarm lamps will be lit up by micro-controller, and the relays open related device which can change the temperature and humidity, such as the humidifiers, fans, sprayers and heating",
+        "locator": "sec. 1-2 (system overview) and sec. 2.3 (coordinator hardware)"
+      },
+      "evidence_type": {
+        "value": "lab_prototype_or_HIL",
+        "rule_error": "No evidence probe matched, so the default simulation_only was emitted; the paper reports a built four-node ZigBee network, not a simulation.",
+        "quote": "The ZigBee wireless sensor network consists of three terminal nodes and a coordinator node ... The LCD displays temperature and humidity data of the three sensor nodes alternately at intervals of 10 s",
+        "locator": "sec. 2.1 and sec. 2.3; sec. 4 Results"
+      }
+    },
+    "S52": {
+      "evidence_type": {
+        "value": "mixed_experiment_and_simulation",
+        "rule_error": "First-match rule saw 'simulation results' before the testbed description; the paper combines ray-launching simulation with an empirical measurement campaign on a deployed campus system.",
+        "quote": "The radio planning analysis of the scenario (i.e., a university campus) is presented together with an empirical measurement campaign to corroborate the analytical results.",
+        "locator": "sec. 1 Introduction (contribution list); sec. 4-5 (testbed and measurements)"
+      }
+    },
+    "S67": {
+      "c1_strategy": {
+        "value": "none_monitoring_only",
+        "rule_error": "Strategy probe found no match; the paper explicitly disclaims automatic irrigation control.",
+        "quote": "Although this present work does not handle an automatic irrigation system, this issue is a concern",
+        "locator": "sec. Appendix/irrigation-need discussion (IWN computation)"
+      }
+    }
+  }
+}

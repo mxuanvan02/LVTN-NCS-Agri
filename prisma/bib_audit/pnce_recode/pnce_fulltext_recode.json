@@ -1,0 +1,2788 @@
+{
+ "records": [
+  {
+   "id": "S02",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "sampling intervals (up to 60 min",
+   "n1_protocol": "WiFi",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "RL_ML",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "RMSE and MAE values",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy efficiency and reduce operational costs in greenhouses",
+   "evidence_type": "greenhouse_or_plot_experiment",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 70305,
+   "trimmed_chars": 4796,
+   "fields_with_locator": 9,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "urce use. As climate change continues to pose challenges to traditional farming methods, the integrated IoT-RL approach in greenhouses offers a promising solution to ensure food security in an environmentally responsible way. This paper is "
+    },
+    "p2_dynamics_model": {
+     "locator": "body text (no structural marker)",
+     "quote": "rgy use. Wang et al. [ 3 ] present an RL controller based on recurring neural networks based on Long Short-Term Memory (LSTM) for microgrid management with potential applications in greenhouses. Kazmi et al. [ 4 ] explore the use of deep RL"
+    },
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "l, compressed air, mains water and osmosed water connections. Embedded device (raspberrypi4) that deploys an intranet (WiFi, Bluetooth Low Energy) for communication, monitoring, and control. Electric energy meter in three-phase and single-p",
+     "counts": {
+      "WiFi": 3
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. 3 Materials and Methods (RL agent description)",
+     "quote": "In the model presented in this work, the agent performs control actions to adjust the set-points, ensuring that the internal conditions of the greenhouse stay within the predefined maximum and minimum limits.",
+     "rule_error": "First-match rule picked 'optimal control' from a related-work sentence describing Kazmi et al., not the method of this paper."
+    },
+    "c3_architecture": {
+     "locator": "Table 3",
+     "quote": "1 IoT Gateway or Router : This device acts as a central communication point between various sensors and devices and the cloud server. It uses IoT protocols to transmit data. 2 Sensors and Meters : These devices collect data from different s",
+     "counts": {
+      "cloud": 1,
+      "edge_local": 1,
+      "standalone_embedded": 0,
+      "simulation_only": 0
+     }
+    },
+    "p3_time_constant": {
+     "locator": "body text (no structural marker)",
+     "quote": "sampling intervals (up to 60 min"
+    },
+    "e1_control_quality": {
+     "locator": "body text (no structural marker)",
+     "quote": "RMSE and MAE values"
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "energy efficiency and reduce operational costs in greenhouses"
+    },
+    "evidence_type": {
+     "locator": "sec. 3.1 (automated greenhouse with IoT)",
+     "quote": "The expertise of this technician was crucial in transferring the RL model to a real-world automated greenhouse equipped with IoT technology.",
+     "rule_error": "No evidence probe matched, so the default simulation_only was emitted despite a described transfer to a real automated greenhouse."
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "rule",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "adjudicated",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "adjudicated",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S03",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "MPC",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "simulation_only",
+   "e1_control_quality": "dry weight (kg m−2 )",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "not_reported",
+   "evidence_type": "simulation_only",
+   "comparator_present": "within_model_comparison",
+   "article_type_flag": "primary_study",
+   "body_chars": 28716,
+   "trimmed_chars": 2579,
+   "fields_with_locator": 8,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 1. INTRODUCTION",
+     "quote": "is not desirable as optimal economic operation requires dynamically adjusting the temperature, humidity, and CO2 levels in the greenhouse. Economic MPC, which uses economic costs directly in the stage cost and does not focus on stabilizing "
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 5.1 Terminal cost",
+     "quote": "ets, with 80% of the data used for training and 20% for validation. To construct the cost function approximator J˜ϕ , a neural network parameterized by ϕ is trained using the values of x1 (k (i) ) and k (i) as inputs and the values of Jπθ ("
+    },
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "RL-Guided MPC for Autonomous Greenhouse Control Salim Msaad ∗ Murray Harraway ∗ Robert D. McAllister ∗ arXiv:2506.13278v1 [eess.SY] 16 Jun 2025 ∗ Delft Center for Systems"
+    },
+    "c3_architecture": {
+     "locator": "sec. 4. MODEL PREDICTIVE CONTROL",
+     "quote": "ted with the previous solution. The optimization problem is solved numerically using the open-source software framework CasADi (Andersson et al. (2019)) and the IPOPT solver (Wächter and Biegler (2006)). Two different MPC controllers are d",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 0,
+      "simulation_only": 2
+     }
+    },
+    "evidence_type": {
+     "locator": "body text (no structural marker)",
+     "quote": "d RL via numerical simulations. Two scenarios are considered: a deterministic environment and an uncertain environment. Simulation results demonstrate that, in both environments, RL-Guided MPC outperforms both RL and MPC with shorter predic",
+     "counts": {
+      "simulation_only": 4
+     }
+    },
+    "comparator_present": {
+     "locator": "body text (no structural marker)",
+     "quote": "certainties of RL with MPC’s online optimization to improve overall control performance. The RL-Guided MPC framework is compared with both MPC and RL via numerical simulations. Two scenarios are considered: a deterministic environment and a"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 1. INTRODUCTION; Table 1",
+     "quote": "dry weight (kg m−2 )"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "absent",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S05",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "higher_order",
+   "p3_time_constant": "time constants whose presence cause the system to be more",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "optimal_control",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "not_stated",
+   "e1_control_quality": "dry weight is considered to be the major",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption amounts to approximately 15% of the total",
+   "evidence_type": "greenhouse_or_plot_experiment",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 441194,
+   "trimmed_chars": 102969,
+   "fields_with_locator": 8,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 7.2.4. Concluding r e m a r k s",
+     "quote": "cussion 7.2.4. Concluding r e m a r k s 7.3. The effect of d i f f e r e n t crop g r o w t h models on optimal heating in greenhouse climate management 7.3.1. Introduction 7.3.2. Methodology 7 . 3 . 3 . Results and discussion 7.3.4. Conclu"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 22 Chapter 3",
+     "quote": "ions involved in the carboxylation process. In this research the carboxylation resistance is described by the following second order polynomial fitted to data from Goudriaan (1987): (3.7) (r car = c car>1 Xt + c c a r > 2 X t + c c a r i 3 "
+    },
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "Co-promotor: Dr. J. Bontsema, universitair docent, vakgroep Agrotechniek en -fysica GREENHOUSE CLIMATE MANAGEMENT: AN OPTIMAL CONTROL APPROACH n c-h AJAJof?o1 ^ Ö E.J. van Henten GREENHOUSE CLIMATEMANAGEMENT:ANOPTIMALCONTROLAPPROACH PROEFSC"
+    },
+    "evidence_type": {
+     "locator": "sec. 3.2.4.3. Validation",
+     "quote": "days in the beginning (27 - 31 January), the middle (13 - 17 February) and towards the end ( 1 - 5 March) of the second greenhouse experiment in 1992. The data obtained in the period from 13 to 17 February 1992 were used for manual calibrat",
+     "counts": {
+      "greenhouse_or_plot_experiment": 16,
+      "simulation_only": 3
+     }
+    },
+    "p3_time_constant": {
+     "locator": "sec. Introduction",
+     "quote": "time constants whose presence cause the system to be more"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 2. FORMULATION OF THE CONTROL PROBLEM",
+     "quote": "dry weight is considered to be the major"
+    },
+    "e3_energy": {
+     "locator": "sec. 1. INTRODUCTION",
+     "quote": "energy consumption amounts to approximately 15% of the total"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "rule",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "absent",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S06",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "on_off_threshold",
+   "c2_trigger": "manual_remote",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "water savings over manual alternate wetting and drying",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "not_reported",
+   "evidence_type": "field_deployment",
+   "comparator_present": "concurrent_experimental",
+   "article_type_flag": "primary_study",
+   "body_chars": 34878,
+   "trimmed_chars": 7818,
+   "fields_with_locator": 9,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 43 Page 2 of 9 Agron. Sustain. Dev. (2021) 41: 4; p.3/9",
+     "quote": "tcome whose plots were not connected to the secondary canals re- indicators’ measurement. ceived water through field-to-field irrigation by temporarily opening field boundaries and closing them when enough wa- 2.1.1 Internet of Things solut"
+    },
+    "n1_protocol": {
+     "locator": "sec. 43 Page 4 of 9 Agron. Sustain. Dev. (2021) 41: 4; p.4/9",
+     "quote": "mitted dB transmission power (Kolobe et al. 2020; Ali et al. 2019)). the water level data in real time using a wireless LoRa con- The controller or gateway sent the data to the cloud-based data nection. This connection is ideal for outside ",
+     "counts": {
+      "LoRa_LoRaWAN": 1,
+      "WiFi": 1,
+      "NB_IoT_cellular": 1
+     }
+    },
+    "c3_architecture": {
+     "locator": "sec. 43 Page 2 of 9 Agron. Sustain. Dev. (2021) 41: 4; p.3/9; Fig. 2",
+     "quote": "sensors (“smart” AWD tube), a respective farmer groups. The pilot plots were situated on the controller/gateway, and a cloud platform, as well as mobile sand ridge (described as sandy soil) that had weak water- and web-based end-user applic",
+     "counts": {
+      "cloud": 1,
+      "edge_local": 0,
+      "standalone_embedded": 0,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. Abstract",
+     "quote": "osts by 25% and moderately enhanced rice yields by 2-11%. This pilot was the first to demonstrate in a large-scale open-field trial that it is feasible and beneficial for smallholder farmers to apply cutting-edge Internet of Things technolo",
+     "counts": {
+      "field_deployment": 16
+     }
+    },
+    "comparator_present": {
+     "locator": "sec. 43 Page 4 of 9 Agron. Sustain. Dev. (2021) 41: 4; p.4/9",
+     "quote": "al leveled) (manual leveled) Autonomous water access Yes No Yes Experimental trial 1: winter-spring 2017 crop season Control treatment None 1 plot (0.3 ha) None Man. AWD treatment None 1 plot (0.3 ha) None IoT AWD treatment None 1 plot (0.3"
+    },
+    "article_type_flag": {
+     "locator": "body text (no structural marker)",
+     "quote": "Agronomy for Sustainable Development (2021) 41: 43 https://doi.org/10.1007/s13593-021-00705-z RESEARCH ARTICLE Using the Internet of Things to promote alternate wetting and drying irrigation for rice in Vietnam’s Mekong Delta Vu Bang Pham 1"
+    },
+    "e1_control_quality": {
+     "locator": "sec. Abstract",
+     "quote": "water savings over manual alternate wetting and drying"
+    },
+    "c1_strategy": {
+     "locator": "sec. 2.1.1 and sec. 3.3; p.4/9 and p.7/9",
+     "quote": "it measured every 5 min the water level from 15 cm below ground up to 5 cm above ground ... AWD with a safe groundwater threshold of -15 cm",
+     "rule_error": "No strategy keyword appears in the body; the control rule is stated as a water-level threshold rather than by a named control-theory term."
+    },
+    "c2_trigger": {
+     "locator": "sec. 2.1 / sec. 3.1 (Can Tho site description)",
+     "quote": "individually controllable and automatically controlled pump operations",
+     "rule_error": "Trigger probe found no match; irrigation is initiated by the farmer from the application after remote water-level monitoring."
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "adjudicated",
+    "c2_trigger": "adjudicated",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "absent",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule"
+   }
+  },
+  {
+   "id": "S07",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "MPC",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "simulation_only",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption are considered as in (3), but",
+   "evidence_type": "simulation_only",
+   "comparator_present": "concurrent_experimental",
+   "article_type_flag": "primary_study",
+   "body_chars": 44363,
+   "trimmed_chars": 5416,
+   "fields_with_locator": 8,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "ure an adequate supply of fresh food for the growing global population. However, maintaining an optimal growing climate within a greenhouse requires resources and operational costs. To achieve economical and sustainable crop growth, efficie"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 3 Computers and Electronics in Agriculture 215 (; Fig. 3",
+     "quote": "RL agent is shown in Fig. 3, where the actor has the role of storing and applying the current best policy, using a deep neural network. According to the learned policy function, 𝜋(𝑠), and the system state 𝑠, the actor selects optimal action"
+    },
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "and sustainable crop growth, efficient climate control in greenhouse production is paramount. Model Predictive Control (MPC) and Reinforcement Learning (RL) are the two approaches representing model-based and learning-based control, respect"
+    },
+    "c3_architecture": {
+     "locator": "sec. 4.2. Specific MPC settings; Table 5/Fig. 6",
+     "quote": "s over the prediction horizon. Table 5 details other settings that are used during this study. The open-source software CasADi (Andersson et al., 2019) and solver IPOPT (Wächter and Biegler, 2006) are employed in Matlab. These are used to s",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 0,
+      "simulation_only": 2
+     }
+    },
+    "evidence_type": {
+     "locator": "body text (no structural marker)",
+     "quote": "in a unified framework; (3) exploring the mathematical connections and differences between MPC and RL; (4) conducting a simulation study to analyze and compare the performance of MPC and RL; (5) presenting and interpreting the comparative r",
+     "counts": {
+      "simulation_only": 5
+     }
+    },
+    "comparator_present": {
+     "locator": "body text (no structural marker)",
+     "quote": "ardo Morcego a , Wenjie Yin a , Sjoerd Boersma b , Eldert van Henten c , Vicenç Puig a , Congcong Sun c ,∗ a Automatic Control Group (CS2AC), Universitat Politècnica de Catalunya, Spain b Biometris Group, Wageningen University, 6700 AA Wage"
+    },
+    "e3_energy": {
+     "locator": "sec. 3.2.1. Agent description",
+     "quote": "energy consumption are considered as in (3), but"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S08",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "MPC",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "simulation_only",
+   "e1_control_quality": "dry weight to total crop dry weight)",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption",
+   "evidence_type": "simulation_only",
+   "comparator_present": "within_model_comparison",
+   "article_type_flag": "primary_study",
+   "body_chars": 52831,
+   "trimmed_chars": 6524,
+   "fields_with_locator": 9,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 1. Introduction",
+     "quote": "ed to solve greenhouse control challenges [3,10,21]. However, MPC relies heavily on an accurate prediction model, while in a greenhouse prediction model there always exist uncertainties due to, e.g., modeling error and inaccurate weather fo"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 1 These authors contributed equally to this work",
+     "quote": "ies is considered empirically, however no mechanism to compensate for the prediction error is introduced. In [19,20], a neural network is used as a prediction model, with a robust MPC controller addressing the prediction uncertainty; howeve"
+    },
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "ural Technology journal homepage: www.journals.elsevier.com/smart-agricultural-technology Reinforcement learning-based model predictive control for greenhouse climate control Samuel Mallick a, ,∗,1 , Filippo Airaldi a, ,1 , Azita Dabiri a, "
+    },
+    "c3_architecture": {
+     "locator": "sec. 5. Numerical experiments",
+     "quote": "sults can be found at https://github.com/SamuelMallick/mpcrl-greenhouse. All optimization problems are solved using the CasADi framework [2] and the IPOPT solver [31]. Assume that the values of all model parameters 𝑝 are unknown. What [ ] i",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 0,
+      "simulation_only": 2
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 5. Numerical experiments",
+     "quote": "based RL methods, i.e., DDPG, are run on the same Linux machine using four NVIDIA RTX 2090 GPUs. Python source code and simulation results can be found at https://github.com/SamuelMallick/mpcrl-greenhouse. All optimization problems are solv",
+     "counts": {
+      "simulation_only": 3
+     }
+    },
+    "comparator_present": {
+     "locator": "sec. 1. To the best of the authors’ knowledge, a comb",
+     "quote": "odology outperforming existing controllers from the literature in both constraint satisfaction and eﬃcient crop growth. Compared to the state-of-the-art MPC formulations [4,8,19,20,27], instead of addressing uncertainty in the parametrizati"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 6. Conclusions",
+     "quote": "dry weight to total crop dry weight)"
+    },
+    "e3_energy": {
+     "locator": "sec. 1. Introduction",
+     "quote": "energy consumption"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S10",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "sampling interval was set to 5 min",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "MPC",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "not_stated",
+   "e1_control_quality": "overshoot",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption",
+   "evidence_type": "simulation_only",
+   "comparator_present": "within_model_comparison",
+   "article_type_flag": "primary_study",
+   "body_chars": 41938,
+   "trimmed_chars": 7579,
+   "fields_with_locator": 9,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 128 October, 2024",
+     "quote": "he relationship between greenhouse environmental control accuracy and energy consumption is one of the key issues faced in greenhouse research. In this study, a non-linear model predictive control method with an improved objective function "
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 128 October, 2024",
+     "quote": "mize the objective evaluation. The nonlinear model predictive control (NMPC) controller design was based on the wavelet neural network (WNN) data-driven model and applied the interior point method to solve the optimal solution of the object"
+    },
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    },
+    "c1_strategy": {
+     "locator": "sec. 128 October, 2024",
+     "quote": "jabe.org Vol. 17 No. 5 Predictive control for greenhouse temperature and humidity and energy optimization by improved NMPC objective function algorithm Lina Wang1,2,3, Ying Zhang1, Mengjie Xu1, Qiuhui Liu1, Binrui Wang1,2* (1. Institute of "
+    },
+    "evidence_type": {
+     "locator": "sec. 128 October, 2024",
+     "quote": "the objective function control, thus balancing the contradiction between energy consumption and control precision. The simulation results showed that the improved NMPC method reduced energy consumption by 21.02% and 9.54% compared with the ",
+     "counts": {
+      "simulation_only": 3
+     }
+    },
+    "comparator_present": {
+     "locator": "sec. 24 Continuous time comparison of total energy co; Fig. 6/Fig. 7",
+     "quote": "nonlinear control, NMPC effectively reduced temperature and humidity fluctuations and brought lower energy consumption. Compared with MPC, the daytime consumption was reduced by 10.06%, and the nighttime consumption was reduced by 23.11%. F"
+    },
+    "p3_time_constant": {
+     "locator": "sec. Results and discussion",
+     "quote": "sampling interval was set to 5 min"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 2.2.2 The improved NMPC controller design",
+     "quote": "overshoot"
+    },
+    "e3_energy": {
+     "locator": "sec. 128 October, 2024",
+     "quote": "energy consumption"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "rule",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "absent",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S13",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "higher_order",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "MPC",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "standalone_embedded",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption and optimizes",
+   "evidence_type": "simulation_only",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 61984,
+   "trimmed_chars": 7624,
+   "fields_with_locator": 6,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 1. Introduction; p.2/18",
+     "quote": "ty is managed through a graphical interface, allowing the automation of irrigation using fuzzy logic compared to manual drip irrigation [13]. In rural areas, irrigation control is performed by comparing environmental parameters with sensors"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 2 Solar; p.8/18",
+     "quote": "de ( PBC ) when the batteries are recharged, being part of the energy consumption. The first equality constraint is the energy balance, which is represented in Equation (12). The energy system needs to satisfy the energy balance, where the "
+    },
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "lied sciences Article Smart Irrigation System Considering Optimal Energy Management Based on Model Predictive Control (MPC) Wilmer Quimbita , Edison Toapaxi and Jacqueline Llanos * Electrical and Electronic Department, Universidad de las Fu"
+    },
+    "c3_architecture": {
+     "locator": "sec. 1. Introduction",
+     "quote": "gy in some cases through embedded systems that concentrates on controlling the irrigation process automatically using a Raspberry Pi device through Python programming with the help of moisture sensors that monitor the soil [4]. The level of",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 3,
+      "simulation_only": 0
+     }
+    },
+    "e3_energy": {
+     "locator": "sec. 1. Introduction",
+     "quote": "energy consumption and optimizes"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule_no_locator",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S16",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "higher_order",
+   "p3_time_constant": "sampling period of 10 min",
+   "n1_protocol": "ZigBee_802154",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "ETC_event_triggered",
+   "c2_trigger": "self_triggered",
+   "c3_architecture": "standalone_embedded",
+   "e1_control_quality": "water savings while growing healthy crops",
+   "e2_network_resource": "reduce the number of messages in the network by transmitting sensor data only when releva",
+   "e3_energy": "power consumption up to 20%, while still accomplishing the system control obj",
+   "evidence_type": "simulation_only",
+   "comparator_present": "within_model_comparison",
+   "article_type_flag": "primary_study",
+   "body_chars": 40701,
+   "trimmed_chars": 10674,
+   "fields_with_locator": 11,
+   "locators": {
+    "p1_application": {
+     "locator": "Fig. 1/Fig. 2",
+     "quote": "of 25 m × 100 m, as illustrated in Figure 1 . Each area contains approximately 45 productive trees watered with a micro-sprinkler irrigation system. The field is located in northern Mexico (Chihuahua city), which is an arid region with very"
+    },
+    "p2_dynamics_model": {
+     "locator": "body text (no structural marker)",
+     "quote": "nspiration is generally expressed in millimeters (mm) of water lost from a crop surfaced per unit of time (days). 2.1. State Space Model The hydrological balance model describes the dynamics of an irrigation system where the soil moisture c"
+    },
+    "n1_protocol": {
+     "locator": "Fig. 2",
+     "quote": "there was one weather node and a single controller for the entire experimental field. The WSN was implemented over the IEEE 802.15.4 standard, which is the basis for the Zigbee communication protocol [ 41 ]. Zigbee has become a popular prot",
+     "counts": {
+      "ZigBee_802154": 3
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "is predicted based on the evolution of the process state variables. Self-triggered control (STC) has an advantage over event-triggered control (ETC) since it does not require dedicated additional energy-consuming hardware to conduct continu"
+    },
+    "c2_trigger": {
+     "locator": "body text (no structural marker)",
+     "quote": "s are battery-powered, and thus they have to manage energy constraints by implementing efficient communication schemas. Self-triggered control is an aperiodic sampling strategy capable of reducing the number of networked messages compared t"
+    },
+    "c3_architecture": {
+     "locator": "body text (no structural marker)",
+     "quote": "USA) to calculate the reference evapotranspiration for the crop field. These three types of nodes were built upon the Arduino MKR board (Arduino, USA), which includes a 32-bit microprocessor and a 12-bit analog-to-digital converter. The boa",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 8,
+      "simulation_only": 0
+     }
+    },
+    "comparator_present": {
+     "locator": "body text (no structural marker)",
+     "quote": "schemas. Self-triggered control is an aperiodic sampling strategy capable of reducing the number of networked messages compared to traditional periodical sampling. In this paper, we propose an energy-efficient communication strategy for clo"
+    },
+    "p3_time_constant": {
+     "locator": "body text (no structural marker)",
+     "quote": "sampling period of 10 min"
+    },
+    "e1_control_quality": {
+     "locator": "body text (no structural marker)",
+     "quote": "water savings while growing healthy crops"
+    },
+    "e2_network_resource": {
+     "locator": "body text (no structural marker)",
+     "quote": "reduce the number of messages in the network by transmitting sensor data only when releva"
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "power consumption up to 20%, while still accomplishing the system control obj"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "rule",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "rule",
+    "e3_energy": "rule",
+    "evidence_type": "rule_no_locator",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S18",
+   "p1_application": "ncs_generic_nonagricultural",
+   "p2_dynamics_model": "nonlinear",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "MPC",
+   "c2_trigger": "self_triggered",
+   "c3_architecture": "simulation_only",
+   "e1_control_quality": "overshoot constant C ≥ 1 and decay rate γ > 0",
+   "e2_network_resource": "reducing the number of samples is pursued",
+   "e3_energy": "not_reported",
+   "evidence_type": "simulation_only",
+   "comparator_present": "within_model_comparison",
+   "article_type_flag": "primary_study",
+   "body_chars": 39739,
+   "trimmed_chars": 9178,
+   "fields_with_locator": 10,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 153244 VOLUME 12, 2024; p.153244",
+     "quote": "tk + 1tk , k ∈ N0 with the new initial condition time. Section V illustrates the presented method for an x̄(0) = xk+1 . academic example as well as for a vertical take-off and landing (VTOL) aircraft model. The paper is concluded in B. STAB"
+    },
+    "p2_dynamics_model": {
+     "locator": "body text (no structural marker)",
+     "quote": "October 2024. Digital Object Identifier 10.1109/ACCESS.2024.3480522 A Sensitivity-Based Approach to Self-Triggered Nonlinear Model Predictive Control PAULINA CONRAD AND KNUT GRAICHEN , (Senior Member, IEEE) Chair of Automatic Control, Fried"
+    },
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "as not been fully explored. This paper introduces a self-triggering mechanism for nonlinear Model Predictive Control (MPC), extending its application beyond networked systems. The method maximizes the sampling time while accounting for the "
+    },
+    "c2_trigger": {
+     "locator": "body text (no structural marker)",
+     "quote": "rent version 28 October 2024. Digital Object Identifier 10.1109/ACCESS.2024.3480522 A Sensitivity-Based Approach to Self-Triggered Nonlinear Model Predictive Control PAULINA CONRAD AND KNUT GRAICHEN , (Senior Member, IEEE) Chair of Automati"
+    },
+    "c3_architecture": {
+     "locator": "sec. 153246 VOLUME 12, 2024; p.153246",
+     "quote": "he MPC problem (2) is solved by a gradient sensitivity term satisfies 0 < ∥∇J ∗ (xk )∥2 /J ∗ (xk ) < ∞ for method, e.g. GRAMPC [30], then the adjoint state is part ∥xk ∥ → 0. of the solution and therefore available without additional Algori",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 0,
+      "simulation_only": 3
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. IV. EFFICIENT COMPUTATION OF SAMPLING TIME ≤ J ∗; p.153246; Fig. 1/Fig. 2",
+     "quote": "t state λk := λ(0). In conclusion, the parameter c = 0.1. self-triggered optimization problem (18) becomes ∥λk ∥2 2 1) SIMULATION RESULTS 1tk = arg max 1t − c 1t (29a) Figure 1 shows the simulation results of the self-triggered 1t J ∗ (xk )",
+     "counts": {
+      "simulation_only": 6
+     }
+    },
+    "comparator_present": {
+     "locator": "sec. 153248 VOLUME 12, 2024; p.153248; Fig. 4/Table 1",
+     "quote": "for different noise levels the eigenvalues of the linearization about the stationary set- σ ∈ {0.15, 0.25, 0.35, 0.45} compared to classical MPC (i) points xdes , i = 1, . . . , 4 along with the stationary sampling with fixed sampling time "
+    },
+    "e1_control_quality": {
+     "locator": "sec. II. PROBLEM STATEMENT; p.153244",
+     "quote": "overshoot constant C ≥ 1 and decay rate γ > 0"
+    },
+    "e2_network_resource": {
+     "locator": "sec. 153248 VOLUME 12, 2024; p.153248",
+     "quote": "reducing the number of samples is pursued"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "rule",
+    "e3_energy": "absent",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S20",
+   "p1_application": "not_stated",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "sampling period is set as T = 0.2s",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "MPC",
+   "c2_trigger": "self_triggered",
+   "c3_architecture": "not_stated",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "not_reported",
+   "evidence_type": "simulation_only",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 36765,
+   "trimmed_chars": 0,
+   "fields_with_locator": 5,
+   "locators": {
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    },
+    "c1_strategy": {
+     "locator": "sec. 1 Self-Triggered Distributed Model Predictive Co",
+     "quote": "Abstract—This paper investigates an aperiodic distributed communication delays. In [14], a rolling self-triggered DMPC model predictive control approach for multi-agent systems scheme is proposed to mitigate the mutual influences caused (MA"
+    },
+    "c2_trigger": {
+     "locator": "sec. 1 Self-Triggered Distributed Model Predictive Co",
+     "quote": "1 Self-Triggered Distributed Model Predictive Control with Synchronization Parameter Interaction Qianqian Chen Abstract—This paper investigates an aperiodic distributed"
+    },
+    "evidence_type": {
+     "locator": "sec. 1. The second condition on Lyapunov function dec; Fig. 2/Fig. 3",
+     "quote": ") = [0.1, 0.2, −0.1]T , show the efficiency of the proposed Algorithm 1. Consider the e3 (0) = [0.2, −0.2, −0.1]T . The simulation results under formation application for three nonholonomic wheeled mobile Algorithm 1 are shown in Figs. 2 - ",
+     "counts": {
+      "simulation_only": 1
+     }
+    },
+    "p3_time_constant": {
+     "locator": "sec. 3 Interaction level",
+     "quote": "sampling period is set as T = 0.2s"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "absent",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "rule",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "rule",
+    "c3_architecture": "absent",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "absent",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S30",
+   "p1_application": "not_stated",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "NB_IoT_cellular",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "packet loss rate due",
+   "c1_strategy": "RL_ML",
+   "c2_trigger": "event_triggered",
+   "c3_architecture": "simulation_only",
+   "e1_control_quality": "tracking error",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption in the downlink transmission",
+   "evidence_type": "simulation_only",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 59547,
+   "trimmed_chars": 0,
+   "fields_with_locator": 9,
+   "locators": {
+    "p2_dynamics_model": {
+     "locator": "sec. I. I NTRODUCTION",
+     "quote": "then K = ∞. where 1(.) is the indicator function. Also, the high-level policy Similar to [21], a fully connected deep neural network is on MH0 is defined as: used to construct function ΓC (S 0 [k], A0 [k]), which satisfies . π H0 (AH0 [k]|S"
+    },
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "energy-efficient resource allocation in through periodic transmissions with a high data rate. It, a fifth generation (5G) wireless network. We formally state however, comes at the cost of a higher packet loss rate due the problem as a multi",
+     "counts": {
+      "NB_IoT_cellular": 13
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "t classes of ETC strategies; see [7, 8] and the references Index Terms—industrial cyber-physical system, hierarchical reinforcement learning, event-triggered control, power efficient therein. Besides, in this context, there are substantial "
+    },
+    "c2_trigger": {
+     "locator": "body text (no structural marker)",
+     "quote": "1 A Learning Approach for Joint Design of Event-triggered Control and Power-Efficient Resource Allocation Atefeh. Termehchi, and Mehdi. Rasti, Senior Member, IEEE arXiv:2205.07070v1 [eess.SY] 14 May 2022 Abstra"
+    },
+    "c3_architecture": {
+     "locator": "sec. 11 Optimize πθL0 (update parameter θL0",
+     "quote": "DAC to a disjoint and model-based method, as gn,j [k] = hd−3 n [k], where dn [k] is the distance between we use Matlab/Simulink applying a linear model of Cart-Pole user n and the BS as well as h = 0.09 is the loss factor. as [37]: 10   ",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 0,
+      "simulation_only": 2
+     }
+    },
+    "evidence_type": {
+     "locator": "body text (no structural marker)",
+     "quote": "ficient sub-carrier and power allocation based on a predefined event instead of a periodic transmission. policies. Our simulation results show that the proposed approach This event is characterized according to the stability and can properl",
+     "counts": {
+      "simulation_only": 9
+     }
+    },
+    "n3_packet_loss": {
+     "locator": "body text (no structural marker)",
+     "quote": "packet loss rate due"
+    },
+    "e1_control_quality": {
+     "locator": "body text (no structural marker)",
+     "quote": "tracking error"
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "power consumption in the downlink transmission"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "absent",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "rule",
+    "c1_strategy": "rule",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S34",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "WiFi",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "Fuzzy",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "standalone_embedded",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "not_reported",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 37450,
+   "trimmed_chars": 6294,
+   "fields_with_locator": 5,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. I. Introduction mixing control systems, which re; Table 1",
+     "quote": "tudy, used to receive sensor data transmitted by sensor nodes the logic used is IF-AND logic. There are nine rules from within the greenhouse and then input into the used in this inference process, as presented in Table 1. database. The dat"
+    },
+    "n1_protocol": {
+     "locator": "sec. I. Introduction mixing control systems, which re",
+     "quote": "ble parameters. This node comprises several water zone with a mean absolute percentage error components, such as the ESP32 as the value of less than 5 %. microcontroller, a capacitive-based moisture C. Conceptual design sensor for reading t",
+     "counts": {
+      "WiFi": 10
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "87-3379 mev.brin.go.id Design and performance of nutrient dosing control system for hydroponic chilli plant using fuzzy logic controller Haryo Prastono a, *, Mohamad Solahudin b, Supriyanto b a Research Center for Equipment Manufacturing Te"
+    },
+    "c3_architecture": {
+     "locator": "sec. I. Introduction mixing control systems, which re",
+     "quote": "veral water zone with a mean absolute percentage error components, such as the ESP32 as the value of less than 5 %. microcontroller, a capacitive-based moisture C. Conceptual design sensor for reading the moisture value of the growing mediu",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 15,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. I. Introduction mixing control systems, which re",
+     "quote": "rol systems, was conducted by Salih [14]. In their nutrient solution [4]. The third method, a combination research, the prototype was designed to control the of these two, yields an on-off-based nutrient mixing nutrient concentration using ",
+     "counts": {
+      "lab_prototype_or_HIL": 3
+     }
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "absent",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S35",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "WiFi",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "Fuzzy",
+   "c2_trigger": "manual_remote",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption while maintaining the",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 102285,
+   "trimmed_chars": 17137,
+   "fields_with_locator": 9,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "costs as ranchers can locate their cattle with the help of IoT-based sensors [14, 15]. Smart greenhouse Growing plants in a greenhouse is a method to help improve the yield of vegetables, fruits, and crops. Greenhouses control environmental"
+    },
+    "p2_dynamics_model": {
+     "locator": "body text (no structural marker)",
+     "quote": "improve crop management practices, and detect anomalies or diseases at an early stage. Consequently, farmers can make data-driven decisions to optimize yields, reduce waste, and enhance overall crop quality. The benefits of IoT-enabled smar"
+    },
+    "n1_protocol": {
+     "locator": "sec. 3.2 Construction of our smart greenhouse",
+     "quote": "hed within the smart greenhouse to enable seamless communication and control. Wireless com- munication protocols like Wi-Fi, Bluetooth, or Zigbee connect sensors, automation systems, and the central control system. This connectivity allows ",
+     "counts": {
+      "ZigBee_802154": 2,
+      "WiFi": 21
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. 2 Related work",
+     "quote": "cussed. The collected data is transmitted to farmers through IoT and wireless communication, while the system utilizes fuzzy logic for regulating factors like heating, cooling, and humidity inside the greenhouse. Rubanga et al. [37] have de"
+    },
+    "c2_trigger": {
+     "locator": "sec. 3.1 Irrigation control system",
+     "quote": "manual intervention becomes necessary when the system encounters technical errors or requires maintenance. Users can manually control the following functions: • Irrigation Management: Users can adjust the pump settings to control the water "
+    },
+    "c3_architecture": {
+     "locator": "body text (no structural marker)",
+     "quote": "n- mental parameters required by the plant to control the environment in an intelligent green- house. We can create a cloud server for remote access to the system when connecting to IoT [16–19]. The convergence of IoT technologies with agri",
+     "counts": {
+      "cloud": 2,
+      "edge_local": 0,
+      "standalone_embedded": 25,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 2 Related work",
+     "quote": "tabase for real-time data collection and monitoring of crop environments. Additionally, Kurniawan [38] has presented a prototype control and monitoring system for smart green- houses employing fuzzy logic. Finally, Ahmed Ouammi et al. [39] ",
+     "counts": {
+      "lab_prototype_or_HIL": 2
+     }
+    },
+    "article_type_flag": {
+     "locator": "body text (no structural marker)",
+     "quote": "PLOS ONE RESEARCH ARTICLE Smart greenhouse construction and irrigation control system for optimal Brassica Juncea development Hiep Xuan Huynh ID1*, Linh Nhut Tran2, Nghia Duong-Tru"
+    },
+    "e3_energy": {
+     "locator": "sec. 2 Related work",
+     "quote": "energy consumption while maintaining the"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule"
+   }
+  },
+  {
+   "id": "S36",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "time constant (𝜏) of 10µs",
+   "n1_protocol": "WiFi",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "on_off_threshold",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power Consumption Compare to higher version of Raspberry as shown in Fig",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 46280,
+   "trimmed_chars": 3177,
+   "fields_with_locator": 8,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": ") 106(2):373–395 https://doi.org/10.1007/s40030-024-00857-7 ORIGINAL CONTRIBUTION Design and Development of IoT Smart Drip Irrigation and Fertigation Prototype for Small and Medium Scale Farmers. Acase Study of Tomato Farmers in Tanzania Da"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. Results and Discussion; Fig. 14/Fig. 18",
+     "quote": "y components in its development. The programming environment include Visual Studio, leveraging the power of Convolution Neural Network (CNN) for Artificial Intelligent (AI) capabilities. The logic of the software was implemented in C + + , "
+    },
+    "n1_protocol": {
+     "locator": "sec. 375 Fig. 1 System design model; Fig. 3/Fig. 2",
+     "quote": "t Connection Yellow and Blue wire is to be connected with RS485 pins A and B. RS485 VCC pin is connected with 3.3V from ESP32, and the GND pin to the ground The red wire is to be connected to Power supply. Black wire to be connected with gr",
+     "counts": {
+      "WiFi": 25,
+      "Ethernet_wired": 5
+     }
+    },
+    "c3_architecture": {
+     "locator": "sec. 75.33 Fig. 29 Setting up DataStream on Blynk IoT; Table 1/Fig. 29",
+     "quote": "(simulations) 3 Farm soil value (field) Average Moisture (%) NPK (%) 80 81 65 75.33 Fig. 29 Setting up DataStream on Blynk IoT Fig. 30 Setting up IoT interface for data visualization 40 43 40 41 fertilizer to be 43% as compared to 40% NPK i",
+     "counts": {
+      "cloud": 1,
+      "edge_local": 0,
+      "standalone_embedded": 15,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "body text (no structural marker)",
+     "quote": "/10.1007/s40030-024-00857-7 ORIGINAL CONTRIBUTION Design and Development of IoT Smart Drip Irrigation and Fertigation Prototype for Small and Medium Scale Farmers. Acase Study of Tomato Farmers in Tanzania Daniel H. Ngoma1,2 · Dickson Nkong",
+     "counts": {
+      "lab_prototype_or_HIL": 8,
+      "simulation_only": 1
+     }
+    },
+    "p3_time_constant": {
+     "locator": "sec. 2 PDisipation = Imax",
+     "quote": "time constant (𝜏) of 10µs"
+    },
+    "e3_energy": {
+     "locator": "sec. 1. Cost-effective compared to Raspberry Pi 4; Fig. 6",
+     "quote": "power Consumption Compare to higher version of Raspberry as shown in Fig"
+    },
+    "c1_strategy": {
+     "locator": "sec. Functionality Tests; printed p.388",
+     "quote": "the system was expected to activate the irrigation pump when soil moisture dropped below the set threshold",
+     "rule_error": "Strategy probe found no named controller; actuation is described as set-point/threshold switching of pump and fertiliser."
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "rule",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "adjudicated",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S38",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "Fuzzy",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "overshoot the VWC in that minute in order to avoid water waste",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "concurrent_experimental",
+   "article_type_flag": "primary_study",
+   "body_chars": 45924,
+   "trimmed_chars": 7996,
+   "fields_with_locator": 10,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 1. Introduction; p.3/18",
+     "quote": "example can be found in [24], where the authors proposed an FL controller and compared its performance with manual and drip irrigation methods. Their approach achieved a reduction in water consumption of 18% and 7%, respectively. This contr"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 1. Introduction; p.3/18",
+     "quote": "temperature, soil moisture, relative humidity, lighting monitoring, and remote on/off control. In [7], a fuzzy-stranded-neural network model detected downy mildew in viticulture early and successfully. In [23], the FL technique was used to "
+    },
+    "n1_protocol": {
+     "locator": "sec. 2.3. LoRa 868 MHz-Based Wireless Communication; p.6/18; Fig. 3",
+     "quote": "he introduction of Industry 4.0, different wireless technologies have been adopted, such as ZigBee, Bluetooth, LoRa and LoRaWAN, ISA 100.11a, WirelessHART, and WIA-PA. Most of them are based on the IEEE 802.15.4 standard [39], which is a wi",
+     "counts": {
+      "LoRa_LoRaWAN": 32,
+      "ZigBee_802154": 3,
+      "WiFi": 2
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "electronics Article Smart IoT Irrigation System Based on Fuzzy Logic, LoRa, and Cloud Integration Eneko Artetxe * , Oscar Barambones * , Imanol Martín Toral and Asier del Rio , Jokin Uralde , Isidro Calvo System Engineering a"
+    },
+    "c3_architecture": {
+     "locator": "body text (no structural marker)",
+     "quote": "te moisture level in the soil. The control algorithm, based on fuzzy logic, can use the weather forecast, obtained as a cloud service, to reduce water consumption. For testing purposes, the dynamics of the water balance model of the soil we",
+     "counts": {
+      "cloud": 1,
+      "edge_local": 1,
+      "standalone_embedded": 2,
+      "simulation_only": 1
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 1. Introduction; p.3/18",
+     "quote": "lds and industries to reduce the validation time for control schemes and to avoid possible damages in real plants [26]. Hardware-in-the-loop (HiL) testing stands out as a popular technique for developing and commissioning embedded systems i",
+     "counts": {
+      "lab_prototype_or_HIL": 4,
+      "simulation_only": 1
+     }
+    },
+    "comparator_present": {
+     "locator": "sec. 1. Introduction; p.2/18",
+     "quote": "ted irrigation control for marigold flowers using LoRa. Their work demonstrated that the yield increased by 66.78% when compared with manual irrigation. Fuzzy logic (FL) allows making decisions based on imprecise and non-numerical informati"
+    },
+    "article_type_flag": {
+     "locator": "body text (no structural marker)",
+     "quote": "electronics Article Smart IoT Irrigation System Based on Fuzzy Logic, LoRa, and Cloud Integration Eneko Artetxe * , Oscar Barambones * , Imanol Martín Toral and Asier del Rio , J"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 1 Negative; p.8/18; Table 2",
+     "quote": "overshoot the VWC in that minute in order to avoid water waste"
+    },
+    "e3_energy": {
+     "locator": "sec. 2.3. LoRa 868 MHz-Based Wireless Communication; p.6/18",
+     "quote": "power consumption"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule"
+   }
+  },
+  {
+   "id": "S40",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "ZigBee_802154",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "on_off_threshold",
+   "c2_trigger": "time_triggered",
+   "c3_architecture": "standalone_embedded",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption is ultra-low",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "concurrent_experimental",
+   "article_type_flag": "primary_study",
+   "body_chars": 20211,
+   "trimmed_chars": 2475,
+   "fields_with_locator": 8,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "System Design of Online Monitoring and Controlling System Based on Zigbee in Greenhouse Fengmei Li, Yaoguang Wei, Yingyi Chen, Xu Zhang To cite this version: Fengmei Li, Yaoguang Wei, Yingyi Chen, Xu Zhang. System Design of Online Monitorin"
+    },
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "System Design of Online Monitoring and Controlling System Based on Zigbee in Greenhouse Fengmei Li, Yaoguang Wei, Yingyi Chen, Xu Zhang To cite this version: Fengmei Li, Yaoguang Wei, Yingyi Chen, Xu Zhang. System Design of Onl",
+     "counts": {
+      "ZigBee_802154": 21
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. 1-2 (system overview) and sec. 2.3 (coordinator hardware)",
+     "quote": "four different alarm lamps will be lit up by micro-controller, and the relays open related device which can change the temperature and humidity, such as the humidifiers, fans, sprayers and heating",
+     "rule_error": "Strategy probe matched only the word 'monitoring'; the body states relay switching against temperature/humidity thresholds."
+    },
+    "c2_trigger": {
+     "locator": "sec. 3.2 Software design of coordinator node; Fig. 11",
+     "quote": "rdinator receives temperature and humidity data from acquisition sensor nodes, the information takes turns to show data every 10 s in LCD1602. The coordinator analyzes and judges whether the number is over the acquisition nodes, and then ex"
+    },
+    "c3_architecture": {
+     "locator": "Fig. 1",
+     "quote": "ode and three temperature and humidity acquisition terminal nodes, the hardware components of coordinator node includes microcontroller AT89S51, LCD 1602, ZigBee module (coordinator), 5V DC power supply. The acquisition terminal node includ",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 4,
+      "simulation_only": 0
+     }
+    },
+    "comparator_present": {
+     "locator": "body text (no structural marker)",
+     "quote": "a to be unattended in a real application. The monitoring system has lower power, lower cost and larger network capacity compared with traditional wireless technology. 1． The overall structure of system The ZigBee network supports star, tree"
+    },
+    "e3_energy": {
+     "locator": "sec. 2.1. The overall structure of the system",
+     "quote": "power consumption is ultra-low"
+    },
+    "evidence_type": {
+     "locator": "sec. 2.1 and sec. 2.3; sec. 4 Results",
+     "quote": "The ZigBee wireless sensor network consists of three terminal nodes and a coordinator node ... The LCD displays temperature and humidity data of the three sensor nodes alternately at intervals of 10 s",
+     "rule_error": "No evidence probe matched, so the default simulation_only was emitted; the paper reports a built four-node ZigBee network, not a simulation."
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "adjudicated",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "adjudicated",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S41",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "Fuzzy",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "hybrid_cloud_edge",
+   "e1_control_quality": "RMSE < 0",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "mAh LiFePO4 battery, enabling ≥15 days",
+   "evidence_type": "field_deployment",
+   "comparator_present": "concurrent_experimental",
+   "article_type_flag": "primary_study",
+   "body_chars": 30086,
+   "trimmed_chars": 4567,
+   "fields_with_locator": 10,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "ligence in Agriculture http://dx.doi.org/10.62762/DIA.2025.680966 RESEARCH ARTICLE Research on Precision Paddy Field Irrigation Control Technology Based on Multi-Source Sensing Hybrid Model 1 2,* 1 2 1 Hongliang Zhang , Hongxi Xu , Meimei Z"
+    },
+    "p2_dynamics_model": {
+     "locator": "body text (no structural marker)",
+     "quote": "del and practical application for digital farmland system, couples the FAO-56 Penman-Monteith development. model with LSTM deep learning algorithms to establish a dynamic irrigation decision model, Keywords: precision irrigation, hybrid mod"
+    },
+    "n1_protocol": {
+     "locator": "sec. 15 Digital Intelligence in Agriculture",
+     "quote": "5 bands: blue, green, UAV Platform radiometric calibration with Multispectral red, red-edge, NIR) reflectance panel LoRaWAN NTP time sync; 15-min transmission Ground IoT Soil VWC (±2%), pH (±0.3) wireless network interval (915MHz ISM band) ",
+     "counts": {
+      "LoRa_LoRaWAN": 3,
+      "Ethernet_wired": 1
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. 17 Digital Intelligence in Agriculture; Fig. 3",
+     "quote": "s 2 consecutive years). Control accuracy of ±5% The device achieves precise water control through is achieved via a PID-fuzzy control algorithm: a three-level linkage mechanism: Cloud decision → Z de(t) Edge terminal (NVIDIA Jetson) command"
+    },
+    "c3_architecture": {
+     "locator": "sec. 2.1 Experimental Design",
+     "quote": "edge layer with an embedded decision applications are implemented at a local scale and terminal (NVIDIA Jetson); and a cloud platform validated in small experimental plots (<1 ha), lacking for irrigation prescription generation and multi-ga",
+     "counts": {
+      "cloud": 2,
+      "edge_local": 3,
+      "standalone_embedded": 0,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 2.1 Experimental Design",
+     "quote": "al Design China [1]. However, traditional flooding irrigation is characterized by three major challenges: (1) Water The field experiment was carried out at Youyi Farm waste — Field leakage and surface runoff cause (131.8121°E, 46.7825°N) in",
+     "counts": {
+      "field_deployment": 1
+     }
+    },
+    "comparator_present": {
+     "locator": "sec. 2.4 Hybrid Decision Model",
+     "quote": "system. The spatiotemporal alignment 2.5.2 Core Technological Innovations module accomplishes geographic registration, Compared with traditional irrigation sluice gates (in temporal synchronization, and grid resampling, accordance with GB/T"
+    },
+    "article_type_flag": {
+     "locator": "body text (no structural marker)",
+     "quote": "Digital Intelligence in Agriculture http://dx.doi.org/10.62762/DIA.2025.680966 RESEARCH ARTICLE Research on Precision Paddy Field Irrigation Control Technology Based on Multi-Source Sensing Hybrid Model 1 2,* 1 2 1 Hongliang Zhang , Hongxi "
+    },
+    "e1_control_quality": {
+     "locator": "sec. 15 Digital Intelligence in Agriculture",
+     "quote": "RMSE < 0"
+    },
+    "e3_energy": {
+     "locator": "sec. 1. Self-sustaining energy system: Integrates a",
+     "quote": "mAh LiFePO4 battery, enabling ≥15 days"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule"
+   }
+  },
+  {
+   "id": "S42",
+   "p1_application": "hydroponic_cea",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "NB_IoT_cellular",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "on_off_threshold",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "Water saving technology • Higher yields",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy saving up to 9",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 74580,
+   "trimmed_chars": 10179,
+   "fields_with_locator": 9,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. Introduction",
+     "quote": "ing health of cattle 2023 [22] Indore, India • Robotic and automatic system • IoT assists farmers by continuously for hydroponic farming identifying water levels and other • Sensors used - pH, ultra- contaminants sonic, temperature, electri"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 52.048 Wh or 0.052 kWh per day.",
+     "quote": "ations, this capability extends to policymakers, agricultural services, and industry stakeholders, providing them with data-driven insights. These insights help in formulating evidence-based policies and directing investments towards broade"
+    },
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "or a SIS. The e0316911. https://doi.org/10.1371/ journal.pone.0316911 IoT system consists of soil moisture sensor with GSM module powered by PV and an algorithm was developed to adjust irrigation schedules based on soil moisture data. The E",
+     "counts": {
+      "LoRa_LoRaWAN": 10,
+      "WiFi": 6,
+      "NB_IoT_cellular": 31
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. Introduction",
+     "quote": "this state, the sensor reading was found to be 218. These values were considered to classify the dryness of soil and threshold for operating the water pump, explained in algorithm section. Modeling for rainwater harvesting tank We model the"
+    },
+    "c3_architecture": {
+     "locator": "sec. Introduction",
+     "quote": "- • Monitored through mobile apps. perature, and rainfall sensors • Web interface is developed in are used ThinkSpeak cloud platform • Motor pump is controlled using mobile application 2023 [2] Brassica Juncea, • Smart greenhouse with IoT •",
+     "counts": {
+      "cloud": 3,
+      "edge_local": 0,
+      "standalone_embedded": 31,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. Introduction",
+     "quote": "o measure animal body temperatures, GPS is employed for animal tracking, and RFID is used for animal identification. A prototype of the proposed tracking service is developed and tested within a service scenario. A project in India on autom",
+     "counts": {
+      "lab_prototype_or_HIL": 2
+     }
+    },
+    "article_type_flag": {
+     "locator": "body text (no structural marker)",
+     "quote": "PLOS ONE RESEARCH ARTICLE Sustainable Smart Irrigation System (SIS) using solar PV with rainwater harvesting technique for indoor plants Syed Zahurul Islam 1☯ ∗ , Muhammad Saufi Bi"
+    },
+    "e1_control_quality": {
+     "locator": "sec. Introduction; Table 1",
+     "quote": "Water saving technology • Higher yields"
+    },
+    "e3_energy": {
+     "locator": "sec. Introduction",
+     "quote": "energy saving up to 9"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule"
+   }
+  },
+  {
+   "id": "S43",
+   "p1_application": "not_stated",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "WiFi",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "not_stated",
+   "c2_trigger": "time_triggered",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption; after the cycle restarts",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 37858,
+   "trimmed_chars": 6090,
+   "fields_with_locator": 5,
+   "locators": {
+    "n1_protocol": {
+     "locator": "Fig. 4",
+     "quote": "ic board. A SOLAR-POWERED FERTIGATION SYSTEM BASED ON LOW-COST WIRELESS SENSOR NETWORK REMOTELY CONTROLLED BY … 61 WiFi (b) Transmission unit (a) (a) Fig. 4. View of the watermark soil moisture sensor (a) and output frequency of (b) the Wat",
+     "counts": {
+      "LoRa_LoRaWAN": 2,
+      "ZigBee_802154": 2,
+      "WiFi": 12,
+      "NB_IoT_cellular": 1
+     }
+    },
+    "c2_trigger": {
+     "locator": "sec. III. FERTIGATION SYSTEM’S DESCRIPTION",
+     "quote": "inator node, the Wi-Fi one because it allows to implement by using commercial operation is repeated in reiterative way (every 2 minutes) until devices a low cost WSN respecting the technical requirements. the connection is established. Duri"
+    },
+    "c3_architecture": {
+     "locator": "body text (no structural marker)",
+     "quote": "d data by using dynamic agronomic models implemented the environmental impact. The solution allows the integration on a cloud platform, for optimizing the amount and typology of and optimized management of the traditional cropping systems f",
+     "counts": {
+      "cloud": 4,
+      "edge_local": 0,
+      "standalone_embedded": 6,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. III. FERTIGATION SYSTEM’S DESCRIPTION; Fig. 15",
+     "quote": "c application, a diode can be used to set the MPPC threshold in order to track the solar cell over- Fig. 15. Rrealized prototype sensor node equipped with 90 F super-capacitor temperature; referred to the DC1587A board, this could be rechar",
+     "counts": {
+      "lab_prototype_or_HIL": 1
+     }
+    },
+    "e3_energy": {
+     "locator": "sec. III. FERTIGATION SYSTEM’S DESCRIPTION",
+     "quote": "power consumption; after the cycle restarts"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "absent",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "absent",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S44",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "WiFi",
+   "n2_latency": "delay ≤ 50 ms",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "Fuzzy",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "standalone_embedded",
+   "e1_control_quality": "overshoot to below 5% and decreases the stabilization time to 0",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption ≤ 100 mW",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "concurrent_experimental",
+   "article_type_flag": "primary_study",
+   "body_chars": 62048,
+   "trimmed_chars": 12070,
+   "fields_with_locator": 10,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 10 RHopt; p.10/27",
+     "quote": "ting the water and fertilizer mixing ratio, the actual fertilizer amount can be further calculated based on the current sprinkler irrigation amount Watervol,final as follows: Fvol = Mwf · Watervol,final (5) After determining the actual amou"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 1. Introduction",
+     "quote": "iculture, long the foundation of human civilization, is now undergoing a rapid transition from traditional practices to data-driven, intelligent systems [1]. Population growth, accelerating climate change, and the increasing pressure on fin"
+    },
+    "n1_protocol": {
+     "locator": "sec. 1. Introduction; p.3/27",
+     "quote": "(STMicroelectronics, Geneva, Switzerland) platform with integrated sensing and UART-based wireless communication via an ESP8266 Wi-Fi module, the system integrates real-time environmental monitoring with intelligent decision-making—enhanced",
+     "counts": {
+      "LoRa_LoRaWAN": 3,
+      "WiFi": 17,
+      "NB_IoT_cellular": 1
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. 4.5. Fertigation Motion Control; p.12/27",
+     "quote": "nit, a 72 MHz STM32F1 microcontroller (STMicroelectronics, Geneva, Switzerland), executes the control tasks and applies fuzzy control to model the polar motion of the irrigation arm while managing pulse output. However, conventional PID con"
+    },
+    "c3_architecture": {
+     "locator": "sec. Abstract",
+     "quote": "tal heterogeneity. This study proposes an autonomous, cross-regional intelligent fertigation system based on an STM32F1 microcontroller and UART communication protocols. The system integrates a mechanically adjustable iris fertilizer delive",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 17,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. Abstract",
+     "quote": "tigation module, a data interconnection unit, and comprehensive control software with dynamic calibration capabilities. Prototype evaluations conducted on both sloped terrain (up to 38◦ ) and flat surfaces demonstrate a stable performance, ",
+     "counts": {
+      "lab_prototype_or_HIL": 9,
+      "simulation_only": 2
+     }
+    },
+    "comparator_present": {
+     "locator": "sec. 4.4. Fertilizer Delivery Motion Control; p.11/27",
+     "quote": "duction without adjustment, but the closed-loop system suppresses this to within the overall flow control error range). Compared with traditional fixed-aperture designs (which exhibit >10% flow fluctuation), this system achieves precise reg"
+    },
+    "n2_latency": {
+     "locator": "sec. 4.1. Software Control Architecture; p.7/27; Fig. 7",
+     "quote": "delay ≤ 50 ms"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 4.5. Fertigation Motion Control; p.12/27",
+     "quote": "overshoot to below 5% and decreases the stabilization time to 0"
+    },
+    "e3_energy": {
+     "locator": "sec. 4.1. Software Control Architecture; p.7/27",
+     "quote": "power consumption ≤ 100 mW"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "rule",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S45",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "packet loss occurs",
+   "c1_strategy": "Fuzzy",
+   "c2_trigger": "time_triggered",
+   "c3_architecture": "hybrid_cloud_edge",
+   "e1_control_quality": "water saving",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption",
+   "evidence_type": "field_deployment",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 67917,
+   "trimmed_chars": 10533,
+   "fields_with_locator": 10,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "es at the lowest rate of 0.268 kbps to a distance of 4 km, whereas, at 10.937 kbps, it only takes 0.9 s. The results of field irrigation trials during the wheat grain filling stage have demonstrated that the irrigation amount determined bas"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 802.15.1 Wi-Fi; p.3/27",
+     "quote": "eld environmental information to construct a crop water requirement prediction model based on the back propagation (BP) neural network. Vianny et al. [20] proposed a hybrid irrigation forecasting model based on machine learning algorithms s"
+    },
+    "n1_protocol": {
+     "locator": "sec. 1. Introduction; p.2/27",
+     "quote": "on area network. Ramson et al. [12] developed a soil health monitoring system whose selfpowered terminal nodes utilized LoRaWAN (wide area network) to achieve long-distance transmission of information. To achieve the management of a smart i",
+     "counts": {
+      "LoRa_LoRaWAN": 37,
+      "ZigBee_802154": 4,
+      "WiFi": 5,
+      "NB_IoT_cellular": 13,
+      "Ethernet_wired": 13
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. 802.15.1 Wi-Fi; p.3/27",
+     "quote": "e irrigation. At present, in the field of water-saving irrigation, various control algorithms such as machine learning, fuzzy control, and evapotranspiration (ET) have been introduced. Benzaouia et al. [18] proposed a feedback fuzzy logic c"
+    },
+    "c2_trigger": {
+     "locator": "sec. 2.2.1. Node Software Design; p.10/27; Fig. 6",
+     "quote": "e gateway. Utilizing the overflow interrupt flag of a defined timer, the program reads the flow meter’s cumulative flow every 30 s and compares it against the designated irrigation volume. Once the target irrigation volume is achieved, the "
+    },
+    "c3_architecture": {
+     "locator": "sec. 2.1.2. Gateway Hardware Design; p.7/27",
+     "quote": "e edge computing gateway of the smart irrigation system serves as the central component, connecting LoRa nodes with the cloud platform, collecting meteorological data, analyzing and processing information, and running irrigation algorithms ",
+     "counts": {
+      "cloud": 7,
+      "edge_local": 17,
+      "standalone_embedded": 12,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 3.1. System Communication Tests; p.17/27; Fig. 10",
+     "quote": "smission rates, providing a reference for users to deploy wireless sensor networks in real-world application scenarios. On-site deployment is as shown in Figure 10: the gateway is placed at a fixed location to operate and send data packets ",
+     "counts": {
+      "field_deployment": 3
+     }
+    },
+    "n3_packet_loss": {
+     "locator": "sec. 3.1. System Communication Tests; p.17/27",
+     "quote": "packet loss occurs"
+    },
+    "e1_control_quality": {
+     "locator": "body text (no structural marker)",
+     "quote": "water saving"
+    },
+    "e3_energy": {
+     "locator": "sec. 2.1.1. Node Hardware Design; p.7/27",
+     "quote": "power consumption"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "rule",
+    "c1_strategy": "rule",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S46",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "packet loss Minimize frequency of communication Remote installation",
+   "c1_strategy": "not_stated",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "edge_local",
+   "e1_control_quality": "ise",
+   "e2_network_resource": "duty cycle is not a primary concern while deploying LoRaWAN-",
+   "e3_energy": "power consumption",
+   "evidence_type": "field_deployment",
+   "comparator_present": "none",
+   "article_type_flag": "secondary_review",
+   "body_chars": 43257,
+   "trimmed_chars": 11921,
+   "fields_with_locator": 10,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "sensors Review Leveraging LoRaWAN Technology for Precision Agriculture in Greenhouses Ritesh Kumar Singh * Rafael Berkvens , Michiel Aernouts , Mats De Meyer, Maarten Weyn and University of Antwerp - imec, IDLab - Faculty of Applied Enginee"
+    },
+    "p2_dynamics_model": {
+     "locator": "sec. 2. Related Work; p.5/18",
+     "quote": "[39], developed combination of neural networks by using color constancy method to normalize different color of images. Neural network-based prediction of soil water is used in the paper [40], for the management of water valves to achieve op"
+    },
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "sensors Review Leveraging LoRaWAN Technology for Precision Agriculture in Greenhouses Ritesh Kumar Singh * Rafael Berkvens , Michiel Aernouts , Mats De Meyer, Maarten Weyn and University of",
+     "counts": {
+      "LoRa_LoRaWAN": 41,
+      "ZigBee_802154": 1,
+      "Ethernet_wired": 2
+     }
+    },
+    "c3_architecture": {
+     "locator": "sec. 3. Materials, Methods and Field Tests in a Green; p.6/18; Fig. 3/Table 3",
+     "quote": "d load balancing Sensor holes Network quality and coverage analysis Sensor, power, connectivity and coverage analysis Fog computing Machine learning, storage .. Optimization of energy and message frequency Dashboard, alerts and analytics Da",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 2,
+      "standalone_embedded": 2,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 3.4. Architecture Schema of WSN Communication in; p.10/18; Fig. 8/Fig. 2",
+     "quote": "e In Figure 2, we illustrate the high-level architecture and deployment setup in the greenhouse. It comprises of the on-field deployment of the sensors and gateway and processing of the data at the back end. The hardware setup used for the ",
+     "counts": {
+      "field_deployment": 4,
+      "lab_prototype_or_HIL": 1
+     }
+    },
+    "article_type_flag": {
+     "locator": "body text (no structural marker)",
+     "quote": "sensors Review Leveraging LoRaWAN Technology for Precision Agriculture in Greenhouses Ritesh Kumar Singh * Rafael Berkvens , Michiel Aernouts , Mats De Meyer, Maarten Weyn"
+    },
+    "n3_packet_loss": {
+     "locator": "sec. 3. Materials, Methods and Field Tests in a Green; p.6/18",
+     "quote": "packet loss Minimize frequency of communication Remote installation"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 3.3. Optimal design for sensor box; p.10/18; Fig. 7/Fig. 8",
+     "quote": "ise"
+    },
+    "e2_network_resource": {
+     "locator": "sec. 3.2. Communication Technology; p.7/18; Table 3/Fig. 4",
+     "quote": "duty cycle is not a primary concern while deploying LoRaWAN-"
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "power consumption"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "rule",
+    "c1_strategy": "absent",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "rule",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule"
+   }
+  },
+  {
+   "id": "S48",
+   "p1_application": "not_stated",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "mixed",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "packet error rate below 20%",
+   "c1_strategy": "Fuzzy",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption, etc",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 42129,
+   "trimmed_chars": 3588,
+   "fields_with_locator": 6,
+   "locators": {
+    "n1_protocol": {
+     "locator": "sec. 2.4. Long-Range Low-Power Systems Using LoRaWAN ",
+     "quote": "s and the system’s complexity may pose challenges for wide- spread adoption. 2.4. Long-Range Low-Power Systems Using LoRaWAN Technology In recent years, the adoption of low-power wide-area network (LPWAN) technol- ogies such as LoRaWAN has ",
+     "counts": {
+      "LoRa_LoRaWAN": 49,
+      "ZigBee_802154": 5,
+      "WiFi": 25,
+      "NB_IoT_cellular": 16,
+      "Ethernet_wired": 1
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. 2.4. Long-Range Low-Power Systems Using LoRaWAN ",
+     "quote": "ovements in resource management and sus- tainability. In [13], Artetxe et al. proposed a cutting-edge system combining fuzzy logic, LoRa communication, and cloud computing for precision irrigation. The study highlights how the integration o"
+    },
+    "c3_architecture": {
+     "locator": "body text (no structural marker)",
+     "quote": ". The system utilizes LoRa technology for long-range wire- This work is licensed under the Creative less communication, Blynk platform for real-time data visualization and con- Commons Attribution International trol, and ThingSpeak platform",
+     "counts": {
+      "cloud": 59,
+      "edge_local": 0,
+      "standalone_embedded": 16,
+      "simulation_only": 1
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 4.1.1. Sensor Node; Fig. 3/Fig. 4",
+     "quote": "module, transceiver module, and power module. The proto- type of the sensor node is shown in Figure 4. Figure 4. Prototype of sensor node. • Sensor connectors: the DHT22 sensor, capacitive soil moisture sensor, DS18B20 sensor, MH-RD sensor,",
+     "counts": {
+      "lab_prototype_or_HIL": 5,
+      "simulation_only": 1
+     }
+    },
+    "n3_packet_loss": {
+     "locator": "sec. 2.4. Long-Range Low-Power Systems Using LoRaWAN ",
+     "quote": "packet error rate below 20%"
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "power consumption, etc"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "absent",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "rule",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S52",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "packet losses and even to a wireless communication outage",
+   "c1_strategy": "Fuzzy",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "water saving",
+   "e2_network_resource": "duty cycle limit of on-air time",
+   "e3_energy": "energy consumption, this",
+   "evidence_type": "mixed_experiment_and_simulation",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 64133,
+   "trimmed_chars": 14697,
+   "fields_with_locator": 10,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. 2.1. IoT Smart Irrigation Systems; p.4/33",
+     "quote": "ter level Node MCU Bluetooth, BLE Thingspeak Irrigation (m3 /year) Thermal imaging Decision Support System (DSS) Drip irrigation Sprinkler Water conductivity Arduino Mega RFID Energy consumption Energy harvesting Testbed Nebulizer irrigatio"
+    },
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "ementation, and Empirical Validation of an IoT Smart Irrigation System for Fog Computing Applications Based on LoRa and LoRaWAN Sensor Nodes † Iván Froiz-Míguez 1,2 , Peio Lopez-Iturri 3,4 , Paula Fraga-Lamas 1,2, * , Mikel Celaya-Echarri 5",
+     "counts": {
+      "LoRa_LoRaWAN": 156,
+      "ZigBee_802154": 6,
+      "WiFi": 10,
+      "NB_IoT_cellular": 9,
+      "Ethernet_wired": 1
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. 2.1. IoT Smart Irrigation Systems; p.3/33; Table 1",
+     "quote": "d energy harvesting. A different approach is proposed by Munir et al. [15], which uses an intelligent method based on a fuzzy logic to schedule irrigation based on different parameters. Since the design of smart irrigation systems involves "
+    },
+    "c3_architecture": {
+     "locator": "sec. 2.1. IoT Smart Irrigation Systems; p.4/33",
+     "quote": "year) Machine learning (AI) Control System Spray irrigation Ad hoc Valves Water level Node MCU Bluetooth, BLE Thingspeak Irrigation (m3 /year) Thermal imaging Decision Support System (DSS) Drip irrigation Sprinkler Water conductivity Arduin",
+     "counts": {
+      "cloud": 1,
+      "edge_local": 22,
+      "standalone_embedded": 6,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 1 Introduction (contribution list); sec. 4-5 (testbed and measurements)",
+     "quote": "The radio planning analysis of the scenario (i.e., a university campus) is presented together with an empirical measurement campaign to corroborate the analytical results.",
+     "rule_error": "First-match rule saw 'simulation results' before the testbed description; the paper combines ray-launching simulation with an empirical measurement campaign on a deployed campus system."
+    },
+    "article_type_flag": {
+     "locator": "body text (no structural marker)",
+     "quote": "sensors Article Design, Implementation, and Empirical Validation of an IoT Smart Irrigation System for Fog Computing Applications Based on LoRa and LoRaWAN Sensor Nodes † Iván"
+    },
+    "n3_packet_loss": {
+     "locator": "sec. 4.3. Simulation Results; p.19/33; Fig. 13",
+     "quote": "packet losses and even to a wireless communication outage"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 2.4. Key Findings; p.6/33",
+     "quote": "water saving"
+    },
+    "e2_network_resource": {
+     "locator": "sec. 3.3. LoRa and LoRaWAN; p.9/33",
+     "quote": "duty cycle limit of on-air time"
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "energy consumption, this"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "rule",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "rule",
+    "e3_energy": "rule",
+    "evidence_type": "adjudicated",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule"
+   }
+  },
+  {
+   "id": "S55",
+   "p1_application": "not_stated",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "Packet Delivery Ratio), which show the results of the quality of",
+   "c1_strategy": "none_monitoring_only",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "not_stated",
+   "e1_control_quality": "water savings by 22% - 33%, so that the use of smart greenhouses supports",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption, and high robustness are just a",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 17316,
+   "trimmed_chars": 3948,
+   "fields_with_locator": 6,
+   "locators": {
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "IOP Conference Series: Earth and Environmental Science PAPER • OPEN ACCESS You may also like - Enhanced LoRaWAN performance Design of IoT Monitoring System Based on through advanced spread factor allocation empowered by machine learning LoR",
+     "counts": {
+      "LoRa_LoRaWAN": 45,
+      "ZigBee_802154": 1,
+      "WiFi": 2
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": ": Earth and Environmental Science PAPER • OPEN ACCESS You may also like - Enhanced LoRaWAN performance Design of IoT Monitoring System Based on through advanced spread factor allocation empowered by machine learning LoRaWAN Architecture for"
+    },
+    "evidence_type": {
+     "locator": "sec. 3. Methods; Fig. 3/Fig. 4",
+     "quote": "Linux server. The design of the system is shown in figure 3. Figure 3. LoRa and MQTT server designed Build the (prototype) system. The circuit made is placed in a box built on ESP32, The LoRa SX1276 and DHT22 devices and LoRa antennas. The ",
+     "counts": {
+      "lab_prototype_or_HIL": 2
+     }
+    },
+    "n3_packet_loss": {
+     "locator": "sec. 3. Methods",
+     "quote": "Packet Delivery Ratio), which show the results of the quality of"
+    },
+    "e1_control_quality": {
+     "locator": "sec. 1. Introducing",
+     "quote": "water savings by 22% - 33%, so that the use of smart greenhouses supports"
+    },
+    "e3_energy": {
+     "locator": "sec. 2.2. LoRA and LoRaWAN",
+     "quote": "power consumption, and high robustness are just a"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "absent",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "rule",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "absent",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S57",
+   "p1_application": "hydroponic_cea",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "WiFi",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "none_monitoring_only",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "standalone_embedded",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "not_reported",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 24135,
+   "trimmed_chars": 5625,
+   "fields_with_locator": 5,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "o, Erukala Suresh Babu, P. Siva Naga Raju , Ilaiah Kavati Abstract: This paper proposesan efficient monitoring unit for Controlled Environment Agriculture (CEA) system based on hydroponics environment using various IoTsensor nodes, which is"
+    },
+    "n1_protocol": {
+     "locator": "sec. 8778 Figure-1 Controlled Environment Agriculture",
+     "quote": "ced by various researchers. BoSun.et.al put forth Crop Monitoring System Based on Wireless Sensor for Agriculture Using Wi-Fi Networking which he coupled wireless technologies with the sensor based devices to monitor many of the important c",
+     "counts": {
+      "ZigBee_802154": 2,
+      "WiFi": 7
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "logy and Engineering (IJRTE) ISSN: 2277-3878, Volume-8 Issue-3, September 2019 Smart Agriculture: Automated Controlled Monitoring System using Internet of Things Mekala Srinivasa Rao, Erukala Suresh Babu, P. Siva Naga Raju , Ilaiah Kavati A"
+    },
+    "c3_architecture": {
+     "locator": "sec. 3.3 System Architecture",
+     "quote": "stem Architecture This subsection presents the system architecture of the proposed system, which is modelled using AMD (Arduino Mega Development)kit that is connected with various sensor nodes like light sensor for measuring the luminance, ",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 7,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. 3.4 Software System Design:; Fig. 1/Fig. 2",
+     "quote": "Figure 1 and Figure 2 shows the future scope of CEA, which can be achieved with the proposed model. Figure 4 shows the prototype of monitoring device with sensors, which is tested on a tomato plant and the results are relatively close to re",
+     "counts": {
+      "lab_prototype_or_HIL": 2
+     }
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "absent",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S58",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "none_no_network",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "not_stated",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "not_stated",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "not_reported",
+   "evidence_type": "simulation_only",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 33289,
+   "trimmed_chars": 3807,
+   "fields_with_locator": 2,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "ural Engineering 2021; volume LII:1105 Wireless sensor network to identify the reduction of meteorological gradients in greenhouse in subtropical conditions Thais Queiroz Zorzeto Cesar, Paulo Ademar Martins Leal, Omar Carvalho Branquinho, F"
+    },
+    "n1_protocol": {
+     "locator": "body text",
+     "quote": "no protocol term found in body text"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "absent",
+    "c2_trigger": "absent",
+    "c3_architecture": "absent",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "absent",
+    "evidence_type": "rule_no_locator",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S59",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "delay and 5 ms",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "not_stated",
+   "c2_trigger": "time_triggered",
+   "c3_architecture": "hybrid_cloud_edge",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption that represents up to 30% of the production cost, by implem",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 52914,
+   "trimmed_chars": 7724,
+   "fields_with_locator": 7,
+   "locators": {
+    "p1_application": {
+     "locator": "Fig. 3",
+     "quote": "the precise location of the pilot (a), highlights the winery and two selected plots (b), and the vineyard featuring the drip irrigation system during the harvest (c). Figure 3 Guaspari Pilot: ( a ) Map of Brazil showing the location of the "
+    },
+    "n1_protocol": {
+     "locator": "Fig. 1",
+     "quote": "e), plant (e.g., growing stage) and weather (e.g., air temperature), as well as LPWAN communication technologies (e.g., LoRaWAN [ 28 ]) are abstracted in this layer. The SWAMP pilots use commercial sensors as well as a homemade multiparamet",
+     "counts": {
+      "LoRa_LoRaWAN": 15,
+      "WiFi": 1,
+      "NB_IoT_cellular": 3
+     }
+    },
+    "c2_trigger": {
+     "locator": "body text (no structural marker)",
+     "quote": "pplication. System metrics: CPU and RAM usage per Docker container, which allows observing each application, collected every 5 s. Experiment metrics: The duration of the experiment given by the number of replications (because some component"
+    },
+    "c3_architecture": {
+     "locator": "body text (no structural marker)",
+     "quote": "xperiments. Both fog and cloud were implemented using virtual machines (VM) in OpenStack. The following standard Amazon AWS VM configurations were deployed: cloud VM equivalent to a t2.medium instance (2vCPU—4 GB of RAM) and the fog VMs (bo",
+     "counts": {
+      "cloud": 2,
+      "edge_local": 11,
+      "standalone_embedded": 0,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "body text (no structural marker)",
+     "quote": "and infrastructures, such as fog computing. Martínez et al. [ 24 ] give a detailed description of the architecture of a testbed of the FIWARE platform configured for the precision agriculture domain. It differs from our approach because the",
+     "counts": {
+      "lab_prototype_or_HIL": 4
+     }
+    },
+    "n2_latency": {
+     "locator": "Fig. 12/Table 1",
+     "quote": "delay and 5 ms"
+    },
+    "e3_energy": {
+     "locator": "Fig. 2",
+     "quote": "energy consumption that represents up to 30% of the production cost, by implem"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "rule",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "absent",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S60",
+   "p1_application": "not_stated",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "ZigBee_802154",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "none_monitoring_only",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "not_stated",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "power consumption, strong mobility and other advantages in deployment and mai",
+   "evidence_type": "simulation_only",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 21967,
+   "trimmed_chars": 4557,
+   "fields_with_locator": 3,
+   "locators": {
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "orchard terrain features, soil differences, species characteristics and the state of tree growth. With the help of the ZigBee technology, artificial intelligence and decision support technology, this paper has developed the research on the ",
+     "counts": {
+      "ZigBee_802154": 7,
+      "NB_IoT_cellular": 3
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "chards and significantly improve the yield of citrus. 2. Overall Structure 2.1. System Design Objectives The real-time monitoring system of citrus soil moisture and nutrient is designed to monitor the soil moisture and nutrient status in th"
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "power consumption, strong mobility and other advantages in deployment and mai"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "absent",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "absent",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule_no_locator",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S61",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "ZigBee_802154",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "MPC",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "standalone_embedded",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption to achieve standardized production",
+   "evidence_type": "lab_prototype_or_HIL",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 50420,
+   "trimmed_chars": 8368,
+   "fields_with_locator": 6,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "commons.org/licenses/by/4.0/ ). The direction of sunshine or the installation sites of environmental control facilities in the greenhouse result in different temperature and humidity levels in the various zones of the greenhouse, and thus, "
+    },
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "the greenhouse. At present, the common communication transmission standards on the market include Bluetooth, WiFi, and Zigbee, etc . Embedded wireless sensor modules are accepted by many users for their low energy consumption, compactness, ",
+     "counts": {
+      "ZigBee_802154": 18,
+      "WiFi": 1
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "y simplified models and intelligent control method are used for greenhouse application, such as neural networks [ 16 ], model predictive control [ 17 ], gradient modeling [ 18 ], dynamic modeling [ 19 ], wireless-based relay control [ 20 ],"
+    },
+    "c3_architecture": {
+     "locator": "body text (no structural marker)",
+     "quote": "The direct-current (DC) fan blows the drip into the environment, humidifying and cooling the regional environment. The microcontroller sends a pulse-wide-modulation (PWM) signal to the solid-state-relay (SSR) to control the pad-fan output. ",
+     "counts": {
+      "cloud": 0,
+      "edge_local": 0,
+      "standalone_embedded": 4,
+      "simulation_only": 0
+     }
+    },
+    "evidence_type": {
+     "locator": "body text (no structural marker)",
+     "quote": "ge wetted pad system can be installed for environmental control in a large greenhouse. 5. Conclusions In this paper, a prototype for a proposed scheme based on a fuzzy rule-based system has been proposed, and it is used to control and monit",
+     "counts": {
+      "lab_prototype_or_HIL": 2
+     }
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "energy consumption to achieve standardized production"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S63",
+   "p1_application": "greenhouse_microclimate",
+   "p2_dynamics_model": "none_stated",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "mixed",
+   "n2_latency": "delay, it changes for greenhouse 1 from 5.96 ms",
+   "n3_packet_loss": "packet loss and no over-delayed packets",
+   "c1_strategy": "none_monitoring_only",
+   "c2_trigger": "time_triggered",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "not_reported",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "mW",
+   "evidence_type": "simulation_only",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 41167,
+   "trimmed_chars": 5479,
+   "fields_with_locator": 9,
+   "locators": {
+    "p1_application": {
+     "locator": "sec. Abstract",
+     "quote": "Fault-tolerance · Reliability 1 Introduction observations and measure the environmental parame- ters and conditions inside the greenhouse in order to get Greenhouses have a fundamental role in modern agricul- more precise measurements with "
+    },
+    "n1_protocol": {
+     "locator": "sec. Abstract",
+     "quote": "reenhouses based on Networked Control Systems. This architecture is IoT-based and built on top of switched Ethernet and Wi-Fi. Some sensors in the proposed architecture require a one-second real-time deadline. Riverbed simulations prove tha",
+     "counts": {
+      "ZigBee_802154": 4,
+      "WiFi": 8,
+      "NB_IoT_cellular": 1,
+      "Ethernet_wired": 7
+     }
+    },
+    "c1_strategy": {
+     "locator": "sec. Abstract",
+     "quote": "[8, 9]. According to the gath- posed system architecture is demonstrated with the sim- ered information coming from the monitoring system, ulation setup in Sect. 4. The Riverbed simulation results decisions can be taken regarding what shoul"
+    },
+    "c2_trigger": {
+     "locator": "sec. Abstract",
+     "quote": "fire extinguisher actuator. All of the taken inside the greenhouse(s) from Layer 1 and Layer 2, actuators take actions every 30 s expect for the fire actua- respectively, (2) reprogram the controller of the individual tor which takes action"
+    },
+    "c3_architecture": {
+     "locator": "sec. Abstract",
+     "quote": "mation (after analyzing it and implements the control actions taken by either of the creating aggregating reports) to a cloud server for storage other two layers of the architecture. For instance, it and extensive data analysis. The Interne",
+     "counts": {
+      "cloud": 4,
+      "edge_local": 0,
+      "standalone_embedded": 8,
+      "simulation_only": 7
+     }
+    },
+    "evidence_type": {
+     "locator": "sec. Abstract",
+     "quote": "s demonstrated with the sim- ered information coming from the monitoring system, ulation setup in Sect. 4. The Riverbed simulation results decisions can be taken regarding what should be done and analysis are presented in Sect. 5. Fault Tol",
+     "counts": {
+      "simulation_only": 13
+     }
+    },
+    "n2_latency": {
+     "locator": "sec. 5.5 Greenhouse 1 Greenhouse 2; Fig. 8/Table 4",
+     "quote": "delay, it changes for greenhouse 1 from 5.96 ms"
+    },
+    "n3_packet_loss": {
+     "locator": "sec. Abstract",
+     "quote": "packet loss and no over-delayed packets"
+    },
+    "e3_energy": {
+     "locator": "sec. Abstract",
+     "quote": "mW"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "absent",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "rule",
+    "n3_packet_loss": "rule",
+    "c1_strategy": "rule",
+    "c2_trigger": "rule",
+    "c3_architecture": "rule",
+    "e1_control_quality": "absent",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S66",
+   "p1_application": "not_stated",
+   "p2_dynamics_model": "higher_order",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "ZigBee_802154",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "packet loss in both sensing and actuating links, respectively",
+   "c1_strategy": "MPC",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "not_stated",
+   "e1_control_quality": "settling time with the larger overshot due to the poor feedback delay and",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "energy consumption [ 18 ]",
+   "evidence_type": "simulation_only",
+   "comparator_present": "none",
+   "article_type_flag": "primary_study",
+   "body_chars": 68288,
+   "trimmed_chars": 16298,
+   "fields_with_locator": 7,
+   "locators": {
+    "p2_dynamics_model": {
+     "locator": "body text (no structural marker)",
+     "quote": "ar time invariant system where every sensing and actuating links are closed over the wireless network [ 49 ]. The plant state-space model [ 49 ] is (18) x ˙ ( t ) = A x ( t ) + B u ( t ) where (19) A = 0 1 0 − 0.1 , B = 0 0.1 and the state "
+    },
+    "n1_protocol": {
+     "locator": "Fig. 1",
+     "quote": "mission slots for sensing and actuation. The intra-cluster subframe is similar to the frame structure of beacon-enabled IEEE 802.15.4 [ 42 ]. After CHs are decided, each CH periodically broadcasts the beacon frame in every intra-cluster sub",
+     "counts": {
+      "ZigBee_802154": 2
+     }
+    },
+    "c1_strategy": {
+     "locator": "body text (no structural marker)",
+     "quote": "ol system is proposed by integrating the control design and the network routing of the WirelessHART standard [ 6 ]. The model predictive control design combines the observer based on an extended Kalman filter and the actuator buffer of rece"
+    },
+    "evidence_type": {
+     "locator": "body text (no structural marker)",
+     "quote": "tion and power system protection are around 100 [ 3 ]. We assume that the MAD is equal to the MATI value. We obtain the simulation results out of 10 experimental runs of 10 5 slots each. We compare the proposed R-WSAN protocol to a traditio",
+     "counts": {
+      "lab_prototype_or_HIL": 1,
+      "simulation_only": 3
+     }
+    },
+    "n3_packet_loss": {
+     "locator": "body text (no structural marker)",
+     "quote": "packet loss in both sensing and actuating links, respectively"
+    },
+    "e1_control_quality": {
+     "locator": "Fig. 10",
+     "quote": "settling time with the larger overshot due to the poor feedback delay and"
+    },
+    "e3_energy": {
+     "locator": "body text (no structural marker)",
+     "quote": "energy consumption [ 18 ]"
+    }
+   },
+   "coding_basis": {
+    "p1_application": "absent",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "rule",
+    "c1_strategy": "rule",
+    "c2_trigger": "absent",
+    "c3_architecture": "absent",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "rule",
+    "evidence_type": "rule",
+    "comparator_present": "rule_no_locator",
+    "article_type_flag": "rule_no_locator"
+   }
+  },
+  {
+   "id": "S67",
+   "p1_application": "irrigation_outdoor",
+   "p2_dynamics_model": "data_driven",
+   "p3_time_constant": "not_stated",
+   "n1_protocol": "LoRa_LoRaWAN",
+   "n2_latency": "not_reported",
+   "n3_packet_loss": "not_reported",
+   "c1_strategy": "none_monitoring_only",
+   "c2_trigger": "not_stated",
+   "c3_architecture": "cloud",
+   "e1_control_quality": "RMSE (Root Mean Squared Error) and the MAE (Mean Absolute Error)",
+   "e2_network_resource": "not_reported",
+   "e3_energy": "not_reported",
+   "evidence_type": "simulation_only",
+   "comparator_present": "within_model_comparison",
+   "article_type_flag": "primary_study",
+   "body_chars": 64162,
+   "trimmed_chars": 20818,
+   "fields_with_locator": 7,
+   "locators": {
+    "p1_application": {
+     "locator": "body text (no structural marker)",
+     "quote": "urces: The nearest weather station, the moisture sensors (analog or digital), the type of crop, and the features of the irrigation system in the monitored field. Therefore, Smart&Green also contributes to the solution of another challenge i"
+    },
+    "p2_dynamics_model": {
+     "locator": "body text (no structural marker)",
+     "quote": "avings over six months ( Section 5.3 ). 2.4. Soil Moisture Prediction In [ 43 ], the Linear Regression, Decision Tree, Random Forest, and Gradient Boosting with Regression Tree (GBRT) machine learning (ML) techniques were applied to weather"
+    },
+    "n1_protocol": {
+     "locator": "body text (no structural marker)",
+     "quote": "latforms such as the Arduino [ 10 , 11 , 12 , 13 , 14 ] or Raspberry Pi [ 15 , 16 , 17 ]. Zigbee [ 11 , 17 , 18 , 19 ], LoRa [ 16 ], Wifi [ 20 ], Bluetooth [ 14 ], GSM [ 12 ], and GPRS [ 21 ] are the predominant wireless technologies used. ",
+     "counts": {
+      "LoRa_LoRaWAN": 2,
+      "ZigBee_802154": 1,
+      "WiFi": 1,
+      "NB_IoT_cellular": 2
+     }
+    },
+    "c3_architecture": {
+     "locator": "body text (no structural marker)",
+     "quote": "ure gathering from fields with analog tensiometers (e.g., field 2 of Figure A1 ) in the Javascript language through the Firebase platform [ 71 ], React Native framework [ 72 ], Realm [ 73 ], and React Native Firebase [ 74 ] libraries. We al",
+     "counts": {
+      "cloud": 2,
+      "edge_local": 0,
+      "standalone_embedded": 5,
+      "simulation_only": 0
+     }
+    },
+    "comparator_present": {
+     "locator": "Table 6/Fig. 9",
+     "quote": "moisture data without an outlier removal technique. The use of the global approach data saved an average of 53.1% when compared to the IWN baseline, and the use of local approach data without preprocessing saved 100% ( Table 6 ). The Zscore"
+    },
+    "e1_control_quality": {
+     "locator": "body text (no structural marker)",
+     "quote": "RMSE (Root Mean Squared Error) and the MAE (Mean Absolute Error)"
+    },
+    "c1_strategy": {
+     "locator": "sec. Appendix/irrigation-need discussion (IWN computation)",
+     "quote": "Although this present work does not handle an automatic irrigation system, this issue is a concern",
+     "rule_error": "Strategy probe found no match; the paper explicitly disclaims automatic irrigation control."
+    }
+   },
+   "coding_basis": {
+    "p1_application": "rule",
+    "p2_dynamics_model": "rule",
+    "p3_time_constant": "absent",
+    "n1_protocol": "rule",
+    "n2_latency": "absent",
+    "n3_packet_loss": "absent",
+    "c1_strategy": "adjudicated",
+    "c2_trigger": "absent",
+    "c3_architecture": "rule",
+    "e1_control_quality": "rule",
+    "e2_network_resource": "absent",
+    "e3_energy": "absent",
+    "evidence_type": "rule_no_locator",
+    "comparator_present": "rule",
+    "article_type_flag": "rule_no_locator"
+   }
+  }
+ ]
+}

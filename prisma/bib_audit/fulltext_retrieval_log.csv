@@ -1,0 +1,175 @@
+﻿record_id,route,url,outcome,detail
+S01,openalex_location,https://doi.org/10.1016/j.atech.2025.101071,NOT_PDF,2727bytes
+S01,openalex_location,https://doaj.org/article/1cae0448a4f7433d9d123f970edac598,HTTP_403,
+S01,semantic_scholar,https://doi.org/10.1016/j.atech.2025.101071,NOT_PDF,2727bytes
+S01,doaj,http://www.sciencedirect.com/science/article/pii/S2772375525003041,HTTP_403,
+S01,unpaywall_location,https://doi.org/10.1016/j.atech.2025.101071,NOT_PDF,2727bytes
+S01,unpaywall_location,https://doaj.org/article/1cae0448a4f7433d9d123f970edac598,HTTP_403,
+S03,openalex_location,https://doi.org/10.1016/j.ifacol.2025.11.829,NOT_PDF,2663bytes
+S03,unpaywall_location,https://doi.org/10.1016/j.ifacol.2025.11.829,NOT_PDF,2663bytes
+S04,openalex_location,https://doi.org/10.1109/iecon.2014.7049044,HTTP_202,
+S06,openalex_location,https://link.springer.com/content/pdf/10.1007/s13593-021-00705-z.pdf?error=cookies_not_supported&code=7fd2cb19-8fbd-4158-a60e-46005c4e9551,OK_PDF,9p/54710chars
+S09,openalex_location,https://doi.org/10.1016/j.ecmx.2025.100939,NOT_PDF,2748bytes
+S09,openalex_location,https://doaj.org/article/565d68a0f4ea46b3b32fd4a671581214,HTTP_403,
+S09,semantic_scholar,https://doi.org/10.1016/j.ecmx.2025.100939,NOT_PDF,2748bytes
+S09,doaj,http://www.sciencedirect.com/science/article/pii/S2590174525000716,HTTP_403,
+S09,unpaywall_location,https://doi.org/10.1016/j.ecmx.2025.100939,NOT_PDF,2748bytes
+S09,unpaywall_location,https://doaj.org/article/565d68a0f4ea46b3b32fd4a671581214,HTTP_403,
+S11,openalex_location,https://doi.org/10.1016/j.conengprac.2024.105908,NOT_PDF,2672bytes
+S11,semantic_scholar,https://doi.org/10.1016/j.conengprac.2024.105908,NOT_PDF,2672bytes
+S11,unpaywall_location,https://doi.org/10.1016/j.conengprac.2024.105908,NOT_PDF,2672bytes
+S12,openalex_location,https://doi.org/10.1016/j.ifacol.2022.11.135,NOT_PDF,2711bytes
+S12,openalex_location,https://research.wur.nl/en/publications/robust-sample-based-model-predictive-control-of-a-greenhouse-syst,NOT_PDF,61215bytes
+S12,semantic_scholar,https://doi.org/10.1016/j.ifacol.2022.11.135,NOT_PDF,2711bytes
+S12,unpaywall_location,https://doi.org/10.1016/j.ifacol.2022.11.135,NOT_PDF,2711bytes
+S12,unpaywall_location,https://research.wur.nl/en/publications/robust-sample-based-model-predictive-control-of-a-greenhouse-syst,NOT_PDF,61215bytes
+S13,openalex_location,https://www.mdpi.com/2076-3417/12/9/4235/pdf?version=1650617137,HTTP_403,
+S13,openalex_location,https://doi.org/10.3390/app12094235,HTTP_403,
+S13,openalex_location,https://doaj.org/article/715be6bbd9124e81a4ed24a6e0020680,HTTP_403,
+S13,openalex_location,https://dx.doi.org/10.3390/app12094235,HTTP_403,
+S13,doaj,https://www.mdpi.com/2076-3417/12/9/4235,HTTP_403,
+S13,publisher_mirror,https://mdpi-res.com/d_attachment/app/app-12094235/article_deploy/app-12094235.pdf,HTTP_404,
+S13,publisher_mirror,https://www.mdpi.com/app12094235/pdf?version=1,HTTP_403,
+S13,unpaywall_location,https://www.mdpi.com/2076-3417/12/9/4235/pdf?version=1650617137,HTTP_403,
+S13,unpaywall_location,https://doi.org/10.3390/app12094235,HTTP_403,
+S13,unpaywall_location,https://dx.doi.org/10.3390/app12094235,HTTP_403,
+S14,openalex_location,https://www.sciencedirect.com/science/article/pii/S2214317317301828/pdf,HTTP_403,
+S14,openalex_location,https://doi.org/10.1016/j.inpa.2018.04.003,NOT_PDF,2711bytes
+S14,semantic_scholar,https://www.sciencedirect.com/science/article/pii/S2214317317301828/pdf,HTTP_403,
+S14,unpaywall_location,https://www.sciencedirect.com/science/article/pii/S2214317317301828/pdf,HTTP_403,
+S14,unpaywall_location,https://doi.org/10.1016/j.inpa.2018.04.003,NOT_PDF,2711bytes
+S15,openalex_location,https://doi.org/10.1109/aiea66061.2025.11160534,HTTP_202,
+S17,openalex_location,https://dl.acm.org/doi/pdf/10.1145/3597311,HTTP_403,
+S17,openalex_location,https://doi.org/10.1145/3597311,HTTP_403,
+S17,openalex_location,http://infoscience.epfl.ch/record/304554,HTTP_405,
+S17,openalex_location,http://hdl.handle.net/20.500.11850/626180,HTTP_500,
+S17,openalex_location,https://doi.org/10.3929/ethz-b-000626180,HTTP_500,
+S17,semantic_scholar,https://dl.acm.org/doi/pdf/10.1145/3597311,HTTP_403,
+S17,unpaywall_location,https://dl.acm.org/doi/pdf/10.1145/3597311,HTTP_403,
+S17,unpaywall_location,https://doi.org/10.1145/3597311,HTTP_403,
+S17,unpaywall_location,http://infoscience.epfl.ch/record/304554,HTTP_405,
+S17,unpaywall_location,http://hdl.handle.net/20.500.11850/626180,HTTP_500,
+S17,unpaywall_location,https://doi.org/10.3929/ethz-b-000626180,HTTP_500,
+S18,openalex_location,https://doi.org/10.1109/access.2024.3480522,HTTP_202,
+S18,openalex_location,https://d-nb.info/1372381732/34,OK_PDF,10p/74856chars
+S19,openalex_location,https://doi.org/10.1109/tii.2025.3593862,HTTP_202,
+S21,openalex_location,https://doi.org/10.1109/tac.2012.2215253,HTTP_202,
+S21,openalex_location,http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-111423,HTTP_-1,
+S21,openalex_location,http://repository.hkust.edu.hk/ir/Record/1783.1-55444,HTTP_302,
+S21,semantic_scholar,https://kth.diva-portal.org/smash/get/diva2:586202/FULLTEXT01,HTTP_-1,
+S21,unpaywall_location,http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-111423,HTTP_-1,
+S23,openalex_location,https://doi.org/10.1016/j.amc.2025.129307,NOT_PDF,2709bytes
+S23,openalex_location,http://www.sciencedirect.com/science/article/pii/S0096300325000347,HTTP_403,
+S24,openalex_location,https://doi.org/10.1109/crc67523.2025.11288265,HTTP_202,
+S25,openalex_location,https://doi.org/10.1109/tsmc.2024.3350157,HTTP_202,
+S26,openalex_location,https://doi.org/10.1109/cdc57313.2025.11312052,HTTP_202,
+S27,openalex_location,https://doi.org/10.1080/00207721.2025.2467224,HTTP_403,
+S28,openalex_location,https://doi.org/10.1109/icit.2003.1290814,HTTP_202,
+S29,openalex_location,https://doi.org/10.1109/etfa.2015.7301402,HTTP_202,
+S29,openalex_location,https://doi.org/10.1109/ETFA.2015.7301402,HTTP_202,
+S29,unpaywall_location,https://doi.org/10.1109/ETFA.2015.7301402,HTTP_202,
+S31,openalex_location,http://dx.doi.org/10.1109/icmsp58539.2023.10170873,HTTP_202,
+S32,openalex_location,https://doi.org/10.1109/tssa68467.2025.11303843,HTTP_202,
+S37,openalex_location,https://doi.org/10.1109/access.2025.3532447,HTTP_202,
+S37,openalex_location,https://doaj.org/article/2f6396f9d7bb4c95b3de4123203a6511,HTTP_403,
+S37,semantic_scholar,https://doi.org/10.1109/access.2025.3532447,HTTP_202,
+S37,unpaywall_location,https://doi.org/10.1109/access.2025.3532447,HTTP_202,
+S37,unpaywall_location,https://doaj.org/article/2f6396f9d7bb4c95b3de4123203a6511,HTTP_403,
+S39,openalex_location,https://doi.org/10.1016/j.agwat.2016.08.008,NOT_PDF,2706bytes
+S39,openalex_location,http://www.sciencedirect.com/science/article/pii/S037837741630292X,HTTP_403,
+S40,openalex_location,https://doi.org/10.1007/978-3-319-19620-6_76,NOT_PDF,242554bytes
+S40,openalex_location,https://inria.hal.science/hal-01420287,NOT_PDF,103950bytes
+S40,semantic_scholar,https://inria.hal.science/hal-01420287,NOT_PDF,103950bytes
+S40,openaire,https://inria.hal.science/hal-01420287/file/978-3-319-19620-6_76_Chapter.pdf,OK_PDF,14p/26953chars
+S47,openalex_location,https://doi.org/10.1109/access.2025.3643617,HTTP_202,
+S47,semantic_scholar,https://doi.org/10.1109/access.2025.3643617,HTTP_202,
+S47,unpaywall_location,https://doi.org/10.1109/access.2025.3643617,HTTP_202,
+S49,openalex_location,https://doi.org/10.1016/j.biosystemseng.2016.11.005,NOT_PDF,2694bytes
+S49,openalex_location,http://hdl.handle.net/11615/71523,NOT_PDF,25021bytes
+S50,openalex_location,https://dergipark.org.tr/en/download/article-file/587896,HTTP_-1,
+S50,openalex_location,https://doi.org/10.21923/jesd.443576,HTTP_-1,
+S50,openalex_location,http://dergipark.gov.tr/jesd/issue/40779/443576,HTTP_404,
+S50,openalex_location,https://dergipark.org.tr/tr/pub/jesd/issue/40779/443576,HTTP_-1,
+S50,semantic_scholar,https://dergipark.org.tr/en/download/article-file/587896,HTTP_-1,
+S50,publisher_mirror,https://dergipark.org.tr/tr/download/article-file/587896,HTTP_-1,
+S50,unpaywall_location,https://dergipark.org.tr/en/download/article-file/587896,HTTP_-1,
+S50,unpaywall_location,https://doi.org/10.21923/jesd.443576,HTTP_-1,
+S51,openalex_location,https://doi.org/10.1109/icosec51865.2021.9591855,HTTP_202,
+S56,openalex_location,https://doi.org/10.1109/ccdc52312.2021.9601377,HTTP_202,
+S62,openalex_location,https://doi.org/10.1109/comapp.2018.8460420,HTTP_202,
+S63,openalex_location,https://link.springer.com/content/pdf/10.1007/s42452-019-0227-8.pdf?error=cookies_not_supported&code=8105d0ce-be73-4658-adc2-e07c622a0906,OK_PDF,12p/61200chars
+S64,openalex_location,https://doi.org/10.1016/j.compag.2019.03.005,NOT_PDF,2686bytes
+S65,openalex_location,https://doi.org/10.1016/j.nahs.2020.100974,NOT_PDF,2719bytes
+S65,semantic_scholar,https://www.sciencedirect.com/science/article/am/pii/S1751570X20301217,HTTP_403,
+S01,semanticscholar_doi,https://doi.org/10.1016/j.atech.2025.101071,HTTP_200,size=2727
+S03,arxiv_title,https://arxiv.org/pdf/2506.13278v1,OK_PDF,pages=6 chars=31295
+S04,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S05,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S09,semanticscholar_doi,https://doi.org/10.1016/j.ecmx.2025.100939,HTTP_200,size=2748
+S11,semanticscholar_doi,https://doi.org/10.1016/j.conengprac.2024.105908,HTTP_200,size=2672
+S12,semanticscholar_doi,https://doi.org/10.1016/j.ifacol.2022.11.135,HTTP_200,size=2711
+S13,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S14,semanticscholar_doi,https://www.sciencedirect.com/science/article/pii/S2214317317301828/pdf,HTTP_403,size=1207903
+S15,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S17,semanticscholar_doi,https://dl.acm.org/doi/pdf/10.1145/3597311,HTTP_403,size=5662
+S19,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S21,semanticscholar_doi,https://kth.diva-portal.org/smash/get/diva2:586202/FULLTEXT01,HTTP_000,size=0
+S22,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S23,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S24,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S25,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S26,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S27,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S28,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S29,uned_eprints,https://e-spacio.uned.es/fez/eserv/bibliuned:DptoISIA-ETSI-Articulos-Earanda-0001/Aranda_Escolastico_Ernesto_stability.pdf,HTTP_000,size=0
+S31,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S32,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S37,semanticscholar_doi,https://doi.org/10.1109/access.2025.3532447,HTTP_202,size=0
+S39,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S47,semanticscholar_doi,https://doi.org/10.1109/access.2025.3643617,HTTP_202,size=0
+S49,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S50,semanticscholar_doi,https://dergipark.org.tr/en/download/article-file/587896,HTTP_000,size=0
+S51,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S56,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S62,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S64,discovery,,NO_OA_CANDIDATE,arXiv/Semantic Scholar/repository discovery returned no lawful open PDF
+S65,semanticscholar_doi,https://www.sciencedirect.com/science/article/am/pii/S1751570X20301217,HTTP_403,size=1207879
+S01,doaj_fulltext,http://www.sciencedirect.com/science/article/pii/S2772375525003041,HTTP_403,
+S04,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S05,wur_fulltext,https://library.wur.nl/WebQuery/wurpubs/fulltext/205106,HTTP_403,
+S05,wur_edepot,https://edepot.wur.nl/205106,OK_PDF,544160 chars extracted
+S09,doaj_fulltext,http://www.sciencedirect.com/science/article/pii/S2590174525000716,HTTP_403,
+S11,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S12,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S13,mdpi_static,https://mdpi-res.com/d_attachment/applsci/applsci-12-04235/article_deploy/applsci-12-04235.pdf,OK_PDF,69605 chars extracted
+S14,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S15,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S17,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S19,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S21,diva_kth,https://www.diva-portal.org/smash/get/diva2:586202/FULLTEXT01,HTTP_-1,
+S21,diva_kth,http://kth.diva-portal.org/smash/get/diva2:586202/FULLTEXT01.pdf,HTTP_-1,
+S22,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S23,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S24,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S25,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S26,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S27,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S28,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S29,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S31,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S32,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S37,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S39,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S47,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S49,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S50,dergipark,https://dergipark.org.tr/tr/download/article-file/587896,HTTP_-1,
+S50,dergipark,https://dergipark.org.tr/en/download/article-file/587896,HTTP_-1,
+S51,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S56,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S62,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S64,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S65,pass3,,NO_NEW_CANDIDATE,arXiv/DOAJ/repository routes returned no new lawful candidate
+S44,mdpi_static,https://mdpi-res.com/d_attachment/actuators/actuators-14-00413/article_deploy/actuators-14-00413.pdf,OK_PDF,pass4 mdpi static mirror for previously reviewed record
+S45,mdpi_static,https://mdpi-res.com/d_attachment/agronomy/agronomy-15-00366/article_deploy/agronomy-15-00366.pdf,OK_PDF,pass4 mdpi static mirror for previously reviewed record
+S46,mdpi_static,https://mdpi-res.com/d_attachment/sensors/sensors-20-01827/article_deploy/sensors-20-01827.pdf,OK_PDF,pass4 mdpi static mirror for previously reviewed record
+S52,mdpi_static,https://mdpi-res.com/d_attachment/sensors/sensors-20-06865/article_deploy/sensors-20-06865.pdf,OK_PDF,pass4 mdpi static mirror for previously reviewed record
