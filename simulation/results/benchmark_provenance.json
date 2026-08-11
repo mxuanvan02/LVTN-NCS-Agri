@@ -1,0 +1,13 @@
+{
+  "source_repository": "https://github.com/mxuanvan02/LVTN-NCS-Agri",
+  "source_commit": "968280dcde672de48b5a719b273d887d1e813a23",
+  "primary_forecast": "causal persistence",
+  "primary_seeds": 50,
+  "seed_start": 2026,
+  "trace_kind": "synthetic weather-conditioned",
+  "inputs": {
+    "data/tokyo_weather.csv": "27daa59380d31f652be7dadde9fedcce3df00c11e057d9e36de2633f78e6d5bc",
+    "data/vietnam_mekong_weather.csv": "6c8f61f7846b7bc4741a466f9ad7f1b5423c39dd6e9d3c68030dee52ee44b481",
+    "data/synthetic_weather_conditioned_lora_trace.csv": "ba6c55212a65ddd38ba98bebe93ff93d015f6a0078d6dfef5dac615de476684a"
+  }
+}

@@ -1,0 +1,16 @@
+name: ncs-agri-v2-preregistration
+version: 2.0
+primary_forecast: causal_persistence
+oracle_primary_forbidden: true
+seeds: {start: 2026, count: 50}
+plants: [greenhouse, irrigation]
+policies: [TT-MPC, ET-MPC, TT-PI, ET-PI]
+networks: [N0_ideal, N1_nominal, N2_iid_loss, N3_burst_loss, N4_contention_duty, N5_full_stress]
+primary_outcomes: [nrmse, violation_pct, transmissions, total_modeled_energy_mj, command_applied_pct, deadline_miss_pct]
+contrasts: [ET-MPC_minus_TT-MPC, ET-PI_minus_TT-PI]
+decision_rule:
+  transmission_reduction_ci_lower_pct: 20
+  nrmse_increase_ci_upper: 0.10
+  violation_increase_ci_upper_percentage_points: 5
+multiplicity: Holm_across_four_plant_controller_family_contrasts
+claim_boundary: simulated_tradeoffs_only_no_field_or_hardware_validation

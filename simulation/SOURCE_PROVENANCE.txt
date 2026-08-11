@@ -1,0 +1,4 @@
+source_repository=https://github.com/mxuanvan02/LVTN-NCS-Agri
+source_commit=968280dcde672de48b5a719b273d887d1e813a23
+retrieved_with=gh repo clone
+retrieved_at_utc=2026-08-11T06:50:48Z

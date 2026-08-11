@@ -1,6 +1,6 @@
 #!/bin/bash
-# Master script to reproduce all simulation results from the paper.
-# It ensures code quality via tests before running time-consuming experiments.
+# Master script for the canonical causal legacy benchmark and the v2 extension.
+# Deprecated look-ahead scripts are intentionally excluded.
 
 # Exit immediately if a command exits with a non-zero status.
 set -e
@@ -17,26 +17,26 @@ python3 -m pytest -v
 echo "[2/6] Fetching Real Mekong Delta Dataset (ERA5 Reanalysis)..."
 python3 data/fetch_real_vn_data.py
 
-# 3. Generate Empirical Network Trace
-echo "[3/6] Fetching/Synthesizing Empirical LoRaWAN Network Trace..."
+# 3. Generate weather-conditioned synthetic packet-status trace
+ echo "[3/8] Generating weather-conditioned synthetic packet-status trace..."
 python3 data/fetch_network_trace.py
 
-# 4. Run Ablation Study
-echo "[4/6] Running Ablation Study..."
-python3 experiments/run_ablation.py
-
-# 5. Run Main Q1 Evaluation (Nominal Conditions)
-echo "[5/6] Running Main Q1 Evaluation (Nominal Conditions)..."
-python3 experiments/run_q1_eval.py
-
-# 6. Run multi-scenario benchmark used for the manuscript summary table
-echo "[6/7] Running Multi-Scenario Benchmark Table Generation..."
+# Legacy scripts run_ablation.py, run_q1_eval*.py are excluded because they
+# contain future-weather look-ahead and inconsistent APIs.  The causal legacy
+# benchmark is retained only for provenance.
+echo "[4/8] Running causal scalar provenance benchmark..."
 python3 experiments/run_q1_benchmark.py
 
-# 7. Run Q1 Evaluation (Extreme Conditions & Long Horizon)
-echo "[7/7] Running Q1 Evaluation (Extreme & Long Horizon)..."
-python3 experiments/run_q1_eval_extreme.py
-python3 experiments/run_q1_eval_real_long.py
+# Version-2 confirmatory extension.
+echo "[5/8] Validating v2 manifest..."
+python3 experiments/run_v2_primary.py --dry-run
+echo "[6/8] Running v2 greenhouse/irrigation benchmark..."
+python3 experiments/run_v2_primary.py --seeds 50
+echo "[7/8] Running SIL/HIL-ready loopback..."
+python3 experiments/run_v2_hil_loopback.py
+echo "[8/8] Regenerating v2 inference and figure..."
+python3 experiments/summarize_v2.py
+python3 experiments/plot_v2.py
 
 
 echo "=================================================="

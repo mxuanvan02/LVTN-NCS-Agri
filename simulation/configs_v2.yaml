@@ -1,0 +1,33 @@
+name: NCS-Agri-v2
+sample_time:
+  greenhouse_s: 300
+  irrigation_s: 1800
+plants:
+  greenhouse:
+    states: [indoor_temperature_c, indoor_relative_humidity_pct]
+    inputs: [thermal_equivalent, humidity_vent_equivalent]
+    disturbances: [outdoor_temperature_c, outdoor_relative_humidity_pct]
+    parameter_status: declared_synthetic_5min_ZOH_benchmark_not_field_identified
+    state_admissible_bounds: [[20, 28], [55, 85]]
+    hard_state_clip: [[5, 50], [10, 100]]
+    input_bounds: [[-8, 8], [-15, 15]]
+    slew_limits: [3, 6]
+    prediction_horizon_steps: 12
+  irrigation:
+    states: [root_zone_vwc_m3_m3, deep_layer_vwc_m3_m3]
+    inputs: [irrigation_depth_mm_per_sample]
+    disturbances: [rain_mm_per_sample, et0_mm_per_sample]
+    parameter_status: declared_synthetic_loam_like_bucket_not_crop_or_soil_calibrated
+    state_admissible_bounds: [[0.18, 0.36], [0.16, 0.40]]
+    hard_state_clip: [[0.08, 0.48], [0.08, 0.48]]
+    input_bounds: [[0, 4]]
+    slew_limits: [1.5]
+    prediction_horizon_steps: 12
+networks:
+  N0_ideal: {uplink_delay_s: 0, downlink_delay_s: 0, jitter_s: 0, uplink_loss: 0, downlink_loss: 0, bandwidth_bps: 1000000000, background_utilization: 0, duty_fraction: 1, ack_loss: 0, max_retries: 0, compute_latency_s: 0}
+  N1_nominal: {uplink_delay_s: 1, downlink_delay_s: 1, jitter_s: 0.5, uplink_loss: 0.05, downlink_loss: 0.02, bandwidth_bps: 50000, background_utilization: 0.20, duty_fraction: 1, ack_loss: 0.01, max_retries: 1, compute_latency_s: 0.08}
+  N2_iid_loss: {uplink_delay_s: 1, downlink_delay_s: 1, jitter_s: 0.5, uplink_loss: 0.20, downlink_loss: 0.10, bandwidth_bps: 50000, background_utilization: 0.20, duty_fraction: 1, ack_loss: 0.02, max_retries: 1, compute_latency_s: 0.08}
+  N3_burst_loss: {uplink_delay_s: 1, downlink_delay_s: 1, jitter_s: 0.5, uplink_loss: 0.20, downlink_loss: 0.10, bandwidth_bps: 50000, background_utilization: 0.20, duty_fraction: 1, ack_loss: 0.02, max_retries: 1, compute_latency_s: 0.08, burst: true}
+  N4_contention_duty: {uplink_delay_s: 2, downlink_delay_s: 2, jitter_s: 1, uplink_loss: 0.05, downlink_loss: 0.05, bandwidth_bps: 10000, background_utilization: 0.70, duty_fraction: 0.10, ack_loss: 0.08, max_retries: 2, compute_latency_s: 0.15}
+  N5_full_stress: {uplink_delay_s: 5, downlink_delay_s: 5, jitter_s: 3, uplink_loss: 0.20, downlink_loss: 0.10, bandwidth_bps: 10000, background_utilization: 0.70, duty_fraction: 0.05, ack_loss: 0.10, max_retries: 2, compute_latency_s: 0.35, burst: true}
+claim_boundary: software_simulation_and_SIL_HIL_ready_only_no_field_or_hardware_validation

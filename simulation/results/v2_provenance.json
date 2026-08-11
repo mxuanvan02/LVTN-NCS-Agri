@@ -1,0 +1,9 @@
+{
+  "runtime_seconds": 419.9992341995239,
+  "planned_runs": 2400,
+  "completed_runs": 2400,
+  "failed_runs": 0,
+  "config_sha256": "569714c2f054d7e589e1a1a495e488b7d47d406c61e9837ff2edbc5d46855c34",
+  "preregistration_sha256": "12ca0f6e05f585cf9d39f2c06178e7b8c550bd464b65480c0a93492d05bf5be9",
+  "claim_boundary": "software simulation and SIL/HIL-ready interfaces; no field or hardware validation"
+}

@@ -6,6 +6,32 @@ This directory contains the simulation source code used by the paper:
 
 The implementation should be interpreted as a **controlled simulation benchmark**, not as field deployment validation. The current plant model is a scalar greenhouse-temperature abstraction. Communication-energy values are modeled communication-energy estimates, not hardware-measured sensor-node energy.
 
+## Version-2 greenhouse + irrigation full-network benchmark
+
+The v2 extension is a separate software-only benchmark. It implements:
+
+- a two-state greenhouse climate abstraction (temperature and relative humidity, 5-minute sample period);
+- a two-layer soil-water bucket (root/deep volumetric water content, 30-minute sample period);
+- TT/ET × one-step constrained receding-horizon control/PI;
+- six two-way network profiles with keyed common random tapes, uplink/downlink loss, delay, jitter, burst state, serialization, contention, finite-queue proxy, duty waiting, ACK loss/retry, computation latency and actuator deadlines;
+- separate modeled TX/RX/listen/retry/compute/baseline/actuation-proxy energy components;
+- in-process, JSONL and UDP-loopback HIL-ready schemas (software-in-the-loop only; no physical HIL claim).
+
+Plant coefficients and network/energy parameters are declared synthetic benchmark assumptions, not field calibration or hardware measurements. The preregistration is `preregistration_v2.yaml`; exact assumptions are in `configs_v2.yaml`.
+
+Run the complete v2 workflow:
+
+```bash
+python -m pytest -q
+python experiments/run_v2_primary.py --dry-run
+python experiments/run_v2_primary.py --seeds 50
+python experiments/run_v2_hil_loopback.py
+python experiments/summarize_v2.py
+python experiments/plot_v2.py
+```
+
+Primary outputs use a `v2_` prefix, preserving all legacy artifacts. `v2_run_manifest.csv` accounts for every scheduled run. `v2_primary_raw.csv`, `v2_primary_summary.csv`, `v2_primary_paired.csv`, `v2_decision_gates.csv`, `v2_sensitivity_raw.csv`, event logs and hashes permit raw-to-summary regeneration. Oracle forecast rows occur only in sensitivity output.
+
 ## Prerequisites
 
 - Python 3.9+
@@ -32,7 +58,7 @@ python data/fetch_network_trace.py
 
 Important terminology note: `data/fetch_network_trace.py` generates a **weather-conditioned synthetic LoRa packet-status trace** from weather-driven heuristics. It should not be described as an empirical field-measured LoRa trace unless measured packet logs are added.
 
-## Reproducing all results
+## Reproducing legacy results
 
 From this `simulation/` directory, run:
 

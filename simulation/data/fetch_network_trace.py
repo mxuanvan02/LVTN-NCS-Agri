@@ -37,6 +37,6 @@ for i in range(len(temps)):
     trace.append(packet_status)
 
 df_trace = pd.DataFrame({'packet_status': trace})
-out_path = os.path.join(os.path.dirname(__file__), 'empirical_lora_trace.csv')
+out_path = os.path.join(os.path.dirname(__file__), 'synthetic_weather_conditioned_lora_trace.csv')
 df_trace.to_csv(out_path, index=False)
 print(f"Generated weather-conditioned synthetic trace (300 hours) with {(1.0 - np.mean(trace))*100:.1f}% overall packet loss to {out_path}")
