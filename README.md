@@ -1,42 +1,92 @@
-# NCS-Agri: PRISMA Audit & Simulation Code
+# LVTN-NCS-Agri — Code and reproducibility companion repository
 
-Mã nguồn và dữ liệu kiểm toán đi kèm luận văn về **Hệ thống điều khiển qua mạng (Networked Control Systems -- NCS) trong nông nghiệp thông minh**, kết hợp quy trình audit theo logic PRISMA 2020 với bộ kiểm thử mô phỏng có thể tái lập.
+Kho lưu trữ này chứa **mã nguồn, dữ liệu tổng hợp/kiểm toán và đầu ra phục vụ tái lập** cho luận văn về *hệ thống điều khiển qua mạng (Networked Control Systems — NCS) trong nông nghiệp thông minh*.
 
-Repo chứa **code + dữ liệu kiểm toán/tổng hợp**; không chứa bản thảo LaTeX, PDF toàn văn của nguồn tham khảo hoặc cache trích xuất cục bộ.
+> **Phạm vi của repository:** code và reproducibility. Repository này **không phải bản nguồn LaTeX của luận văn**, không chứa PDF toàn văn của luận văn, và không chứa bản sao toàn văn các tài liệu tham khảo. Bộ nguồn LaTeX tối thiểu được phát hành riêng dưới dạng gói ZIP.
 
-## Trạng thái bằng chứng tại thời điểm chốt luận văn
+## Nội dung và giới hạn sử dụng
 
-Luồng kiểm toán hiện hành:
+Repository gồm hai nhánh liên quan:
 
-`627 bản ghi thô -> 424 nguồn duy nhất -> 187 sau sàng lọc -> 123 ứng viên mới được thẩm định -> tập tham chiếu 64 nguồn -> 34 toàn văn đã đọc -> 33 nguồn Tier 1`
+1. **PRISMA/evidence audit:** pipeline xây dựng, đối chiếu và phân tầng corpus; bảng mã hóa PNCE; nhật ký truy xuất; đánh giá RoB/GRADE và các thống kê dùng trong luận văn.
+2. **Network-control simulation:** mô hình plant–network–control và các benchmark phần mềm, gồm benchmark v2 cho nhà kính và tưới.
 
-Tập tham chiếu 64 nguồn được tách theo PRISMA 2020:
+Các kết quả mô phỏng là kết quả trong **mô hình chuẩn hóa với tham số và trace đã khai báo**. Năng lượng là năng lượng mô hình hóa, không phải số đo phần cứng. Trace LoRa được tạo theo heuristic có điều kiện thời tiết, không phải log đo mạng thực địa. Vì vậy, repository **không chứng minh hiệu quả triển khai, an toàn sinh học, hay hiệu năng phần cứng ngoài hiện trường**.
 
-- **Tier 1 -- bằng chứng lõi (n = 33):** toàn văn đã được truy xuất hợp pháp, đọc và mã hóa PNCE kèm locator. Chỉ Tier 1 tham gia thống kê nội dung, RoB và GRADE.
-- **Tier 2 -- nguồn bối cảnh (n = 31):** 29 nguồn chưa truy xuất được toàn văn, khảo sát nền tảng S22 và bài tổng quan thứ cấp S46. Tier 2 không tham gia các số đếm bằng chứng.
+## Trạng thái bằng chứng của luận văn
 
-Trong 34 nguồn đã đọc toàn văn, S46 bị loại khỏi bằng chứng sơ cấp vì nhà xuất bản phân loại là bài `Review`. RoB của 33 nguồn Tier 1 gồm 21 `high` và 12 `some_concerns`; các luận điểm GRADE chính vẫn ở mức `very_low_provisional`.
+Luồng audit tại thời điểm chốt luận văn:
 
-## Cấu trúc
+```text
+627 bản ghi thô
+  → 424 nguồn duy nhất
+  → 187 sau sàng lọc
+  → 123 ứng viên bổ sung được thẩm định
+  → 64 nguồn trong tập tham chiếu
+  → 34 nguồn được truy xuất và đọc toàn văn
+  → 33 nguồn Tier 1 được mã hóa làm bằng chứng sơ cấp
+```
+
+- **Tier 1 (n = 33):** toàn văn đã được truy xuất hợp pháp, đọc và mã hóa PNCE kèm locator; dùng cho thống kê nội dung, RoB và GRADE.
+- **Tier 2 (n = 31):** nguồn bối cảnh hoặc chưa có toàn văn được truy xuất trong quy trình; không dùng làm mẫu số cho thống kê bằng chứng lõi.
+- Trong Tier 1, RoB tổng thể gồm 21 nguồn mức cao và 12 nguồn có một số quan ngại; mức chắc chắn của các luận điểm chính được đánh giá là rất thấp, tạm thời.
+
+Các con số trên mô tả trạng thái audit của luận văn; chúng không phải kết quả của một phép đo thực địa.
+
+## Cấu trúc repository
 
 ```text
 prisma/
-  tools/prisma_rebuild_audit.py   # Pipeline nhận diện, gộp lặp và sàng lọc
-  bib_audit/                      # Corpus, PNCE, truy xuất, RoB/GRADE và script tái tạo
-    pnce_recode/                  # Mã hóa toàn văn 12 biến kèm locator
-    two_tier_corpus.csv           # Phân tầng từng nguồn: Tier 1/Tier 2
-    ch3_counts_tier1.json         # Thống kê Chương 3 với mẫu số 33
+  tools/                 # Công cụ dựng lại audit PRISMA
+  bib_audit/             # Corpus, PNCE, truy xuất, RoB/GRADE và script audit
 simulation/
-  src/models.py                   # Mô hình plant + kênh mạng
-  experiments/                    # Benchmark, ablation và đánh giá
-  data/                           # Dữ liệu thời tiết + trace tổng hợp
-  results/                        # Kết quả benchmark CSV
-  tests/                          # Kiểm thử mô hình
+  src/                   # Plant, controller, trigger, network và energy models
+  experiments/           # Benchmark, ablation và các script đánh giá
+  data/                  # Weather data và trace tổng hợp
+  results/               # CSV, manifest, provenance và summary đã sinh
+  tests/                 # Kiểm thử mô hình và artifact
+README.md               # Phạm vi, giới hạn và hướng dẫn tái lập
 ```
 
-## Tái tạo phân tầng và thống kê
+## Môi trường và cài đặt
 
-Từ thư mục gốc repo:
+Yêu cầu tối thiểu: Python 3.9+.
+
+```bash
+cd simulation
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Để tái lập chặt hơn, có thể dùng `requirements-lock.txt` trong cùng thư mục.
+
+## Chạy kiểm thử và benchmark v2
+
+Từ thư mục `simulation/`:
+
+```bash
+python -m pytest -q
+python experiments/run_v2_primary.py --dry-run
+python experiments/run_v2_primary.py --seeds 50
+python experiments/run_v2_hil_loopback.py
+python experiments/summarize_v2.py
+python experiments/plot_v2.py
+```
+
+Benchmark v2 gồm hai plant (greenhouse và irrigation), bốn chính sách (TT-MPC, ET-MPC, TT-PI và ET-PI), sáu cấu hình mạng (`N0_ideal`–`N5_full_stress`) và 50 seed. Các schema JSONL/UDP trong loopback chỉ là **software-in-the-loop/HIL-ready interface**; không được hiểu là HIL vật lý.
+
+Để chạy workflow legacy đầy đủ:
+
+```bash
+./run_all.sh
+```
+
+Workflow legacy tự chuẩn bị dữ liệu thời tiết, tạo trace tổng hợp, chạy kiểm thử và sinh các kết quả trong `simulation/results/`. Không nên gọi trace này là trace LoRa đo thực địa nếu chưa bổ sung log đo thật.
+
+## Tái lập audit PRISMA
+
+Từ thư mục gốc repository:
 
 ```bash
 python3 prisma/bib_audit/build_two_tier_corpus.py
@@ -45,50 +95,21 @@ python3 prisma/bib_audit/build_two_tier_corpus.py
 python3 prisma/bib_audit/regen_ch3_tier1.py
 ```
 
-Các script sinh hình Chương 3/4 được giữ để truy vết mã, nhưng cần cây thư mục `figures/` của bản thảo làm đích xuất và vì vậy không nằm trong lệnh tái tạo tối thiểu của repo đồng hành.
-
-Xem thêm:
+Tài liệu chi tiết:
 
 - [`prisma/bib_audit/README.md`](prisma/bib_audit/README.md): trạng thái corpus và thứ tự pipeline.
-- [`prisma/bib_audit/README_AUDIT.md`](prisma/bib_audit/README_AUDIT.md): cách kiểm tra từng số PRISMA.
-- [`prisma/bib_audit/pnce_recode/SCHEMA.md`](prisma/bib_audit/pnce_recode/SCHEMA.md): định nghĩa 12 biến PNCE và quy tắc locator.
+- [`prisma/bib_audit/README_AUDIT.md`](prisma/bib_audit/README_AUDIT.md): kiểm tra từng bước PRISMA.
+- [`prisma/bib_audit/pnce_recode/SCHEMA.md`](prisma/bib_audit/pnce_recode/SCHEMA.md): 12 biến PNCE và quy tắc locator.
+- [`simulation/README.md`](simulation/README.md): mô tả kỹ thuật các mô hình và benchmark.
 
-## Mô phỏng
+## Dữ liệu, provenance và giấy phép sử dụng
 
-Benchmark kiểm tra đánh đổi giữa chất lượng điều khiển, truyền tin và năng lượng mô hình hóa trên ba kịch bản:
+Repository chỉ phát hành metadata, bảng mã hóa có locator/trích đoạn ngắn cần cho audit, nhật ký provenance, mã nguồn và kết quả tổng hợp. PDF/toàn văn nguồn, văn bản trích xuất toàn bài và cache cục bộ không được phát hành; người dùng phải tự truy xuất qua DOI, kho open-access hoặc thư viện hợp pháp.
 
-- **Mekong-Trace:** trace mất gói tổng hợp được điều kiện hóa theo thời tiết Mekong; không phải log mạng đo thực địa.
-- **Tokyo-Bernoulli:** đối chứng mất gói Bernoulli.
-- **Tokyo-Burst:** đối chứng mất gói tương quan theo thời gian.
+Các tệp `SOURCE_PROVENANCE.txt`, manifest và checksum trong `simulation/` mô tả nguồn dữ liệu, cấu hình và artifact tương ứng. Khi tái lập, cần ghi lại phiên bản Python, dependency, cấu hình và seed.
 
-Mô hình plant là một trừu tượng nhiệt độ nhà kính vô hướng chuẩn hóa. Kết quả không phải xác nhận phần cứng, an toàn sinh học hay hiệu quả triển khai thực địa.
-
-### Chạy kiểm thử và benchmark
-
-```bash
-cd simulation
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-pytest -q
-python experiments/run_q1_benchmark.py
-```
-
-Hoặc chạy toàn bộ quy trình mô phỏng:
-
-```bash
-cd simulation
-./run_all.sh
-```
-
-## Quy tắc công khai dữ liệu
-
-Repo chỉ lưu metadata, bảng mã hóa có locator/trích đoạn ngắn cần cho kiểm toán, nhật ký tuyến truy xuất, mã nguồn và kết quả tổng hợp. Các tệp PDF/toàn văn, văn bản trích xuất toàn bài và cache ứng viên cục bộ bị loại bằng `.gitignore`; người dùng phải tự truy xuất nguồn qua DOI, kho OA hoặc thư viện hợp pháp.
+Mã nguồn được phát hành theo [MIT License](LICENSE). Quyền đối với các công trình được trích dẫn thuộc về tác giả/nhà xuất bản tương ứng.
 
 ## Trích dẫn
 
-Nếu sử dụng mã nguồn hoặc dữ liệu này, vui lòng trích dẫn luận văn tương ứng (xem thông tin trong hồ sơ luận văn).
-
-## Giấy phép
-
-Mã nguồn phát hành theo giấy phép MIT (xem [`LICENSE`](LICENSE)). Quyền đối với các công trình được trích dẫn vẫn thuộc tác giả/nhà xuất bản tương ứng.
+Nếu sử dụng code, dữ liệu tổng hợp hoặc quy trình audit, vui lòng trích dẫn luận văn tương ứng và ghi rõ commit/release của repository đã sử dụng. Repository này là companion code/reproducibility archive, không thay thế cho bản luận văn chính thức.
