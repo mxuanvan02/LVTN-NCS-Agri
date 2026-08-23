@@ -1,4 +1,9 @@
 source_repository=https://github.com/mxuanvan02/LVTN-NCS-Agri
-source_commit=968280dcde672de48b5a719b273d887d1e813a23
+frozen_raw_primary_commit=016692171df66286d3c5d8f0f616504cadf8ebfd
+frozen_raw_primary_path=simulation/results/v2_primary_raw.csv
+frozen_raw_primary_sha256=5cb323188f82bc0cba9a41d2119aa008bb9dce58e3c32e477f9c251e81f8a499
+frozen_preregistration_path=simulation/preregistration_v2.yaml
+post_audit_scope=reporting_and_sensitivity_code_corrections_only
+post_audit_note=Primary raw data and preregistration remain unchanged; derived summaries, both controller-family gates, paired-CI figure, tests, and sensitivity outputs were regenerated after audit.
 retrieved_with=gh repo clone
-retrieved_at_utc=2026-08-11T06:50:48Z
+retrieved_at_utc=2026-08-23T04:12:20Z

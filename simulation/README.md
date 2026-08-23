@@ -4,7 +4,7 @@ This directory contains the simulation source code used by the paper:
 
 **Plant--Network--Control--Evaluation Co-Design for Smart Agriculture: A Systematic Evidence Map and Reproducible Networked-Control Benchmark**
 
-The implementation should be interpreted as a **controlled simulation benchmark**, not as field deployment validation. The current plant model is a scalar greenhouse-temperature abstraction. Communication-energy values are modeled communication-energy estimates, not hardware-measured sensor-node energy.
+The legacy workflow below originated from a scalar greenhouse-temperature abstraction. The authoritative v2 benchmark is different: it contains a synthetic two-state greenhouse model and a synthetic two-layer irrigation bucket model. Neither v2 plant is field calibrated, so results are mechanism-level software evidence rather than deployment validation.
 
 ## Version-2 greenhouse + irrigation full-network benchmark
 
@@ -12,7 +12,7 @@ The v2 extension is a separate software-only benchmark. It implements:
 
 - a two-state greenhouse climate abstraction (temperature and relative humidity, 5-minute sample period);
 - a two-layer soil-water bucket (root/deep volumetric water content, 30-minute sample period);
-- TT/ET × one-step constrained receding-horizon control/PI;
+- TT/ET × finite-horizon constrained receding-horizon control/PI;
 - six two-way network profiles with keyed common random tapes, uplink/downlink loss, delay, jitter, burst state, serialization, contention, finite-queue proxy, duty waiting, ACK loss/retry, computation latency and actuator deadlines;
 - separate modeled TX/RX/listen/retry/compute/baseline/actuation-proxy energy components;
 - in-process, JSONL and UDP-loopback HIL-ready schemas (software-in-the-loop only; no physical HIL claim).
@@ -31,6 +31,24 @@ python experiments/plot_v2.py
 ```
 
 Primary outputs use a `v2_` prefix, preserving all legacy artifacts. `v2_run_manifest.csv` accounts for every scheduled run. `v2_primary_raw.csv`, `v2_primary_summary.csv`, `v2_primary_paired.csv`, `v2_decision_gates.csv`, `v2_sensitivity_raw.csv`, event logs and hashes permit raw-to-summary regeneration. Oracle forecast rows occur only in sensitivity output.
+
+Integrity is recorded at two levels:
+
+- `results/v2_output_hashes.json` verifies the frozen 11-file v2 output set (11/11 checked by tests).
+- `SHA256SUMS.final.txt` verifies the whole publishable simulation bundle. Regenerate it with `python experiments/regenerate_bundle_manifest.py`; by design it excludes itself, the historical `SHA256SUMS.initial.txt`, `.venv`, caches, bytecode and Git metadata. Verify from the parent `Manuscript/` directory with `sha256sum -c simulation/SHA256SUMS.final.txt`.
+
+Derived reporting is reproducible without rerunning raw primary simulations:
+
+```bash
+python experiments/summarize_v2.py
+python experiments/report_v2_sensitivity.py
+```
+
+The paired table preserves raw p-values and unadjusted 95% paired t intervals. Holm adjustment follows the preregistered four plant–controller-family contrasts: for each network × metric endpoint, the four p-values from 2 plants × 2 controller families are adjusted together. Holm applies to the p-values only; the paired intervals and the three-criterion decision gates are not simultaneous family-wise intervals. The gate table contains both MPC and PI families (24 rows: 2 plants × 2 controller families × 6 networks). Sensitivity summaries are descriptive/exploratory and oracle remains sensitivity-only.
+
+Two preregistered endpoints require cautious interpretation in the frozen primary run. `deadline_miss_pct` is identically zero because the configured deadline is much larger than all simulated end-to-end latencies, so it cannot discriminate policies here. `command_applied_pct` is normalized by each policy's attempted transmissions; because ET and TT intentionally have different denominators, this percentage is not a substitute for the absolute number of commands applied and is not used in the trade-off gate.
+
+The stored `random_tape_sha256` verifies the common process/sensor-noise arrays and the `(seed, plant, network)` key. Channel outcomes are reproducible from deterministic keyed draws, but the digest does not enumerate every channel token and must not be described as a byte-for-byte channel-trace hash.
 
 ## Prerequisites
 

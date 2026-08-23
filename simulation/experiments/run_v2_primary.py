@@ -30,11 +30,19 @@ def exogenous(plant,net,seed,n,state_dim):
     tape=RandomTape(seed,plant,net)
     noise=np.array([[tape.normal('plant',k,j,scale=.012 if plant=='irrigation' else .025) for j in range(state_dim)] for k in range(n)])
     sensor=np.array([[tape.normal('sensor',k,j,scale=.003 if plant=='irrigation' else .03) for j in range(state_dim)] for k in range(n)])
+    # Scope note: this digest covers the process-noise and sensor-noise arrays
+    # plus the (seed, plant, network) key. It does not enumerate every channel
+    # realization token (uplink/downlink loss, burst state, jitter, contention,
+    # duty wait, ACK loss). Those are reproducible because RandomTape is a
+    # deterministic keyed RNG over the same key, but they are not hashed here,
+    # so an equal digest attests shared exogenous draws rather than a verified
+    # byte-for-byte identical channel trace.
     h=hashlib.sha256(noise.tobytes()+sensor.tobytes()+f'{seed}:{plant}:{net}'.encode()).hexdigest()
     return tape,noise,sensor,h
 
-def controller_action(kind,plant,x,ref,integ,exog):
+def controller_action(kind,plant,x,ref,integ,exog,predictor=None):
     err=ref-x
+    predictor = predictor or plant
     if kind=='PI':
         kp=np.array([1.2,.8]) if plant.name=='greenhouse' else np.array([4.0,1.0])
         ki=np.array([.05,.03]) if plant.name=='greenhouse' else np.array([.08,.01])
@@ -53,9 +61,9 @@ def controller_action(kind,plant,x,ref,integ,exog):
         costs=np.zeros(len(cand)); d=np.asarray(exog,float)[:2]
         for _ in range(plant.spec.horizon):
             if plant.name=='greenhouse':
-                xp=plant.reference+(xp-plant.reference)@plant.A.T+cand@plant.B.T+(d-plant.disturbance_reference)@plant.E.T
+                xp=predictor.reference+(xp-predictor.reference)@predictor.A.T+cand@predictor.B.T+(d-predictor.disturbance_reference)@predictor.E.T
             else:
-                xp=np.array([plant.predict(xx,uu,d) for xx,uu in zip(xp,cand)])
+                xp=np.array([predictor.predict(xx,uu,d) for xx,uu in zip(xp,cand)])
             z=(xp-ref)/(plant.state_max-plant.state_min)
             costs += np.sum(z*z,axis=1)+.01*np.sum(cand*cand,axis=1)
         u=cand[int(np.argmin(costs))]
@@ -69,8 +77,15 @@ def disturbance(plant_name, k):
 def run_one(plant_name,policy,network,seed,event_log=None,*,trigger_delta=.035,
             forecast_regime='persistence',model_scale=1.0,fallback='hold'):
     plant=GreenhousePlantV2() if plant_name=='greenhouse' else IrrigationPlantV2()
-    if plant_name=='greenhouse' and model_scale != 1.0:
-        plant.A = plant.A * model_scale
+    predictor=GreenhousePlantV2() if plant_name=='greenhouse' else IrrigationPlantV2()
+    # Sensitivity-only model mismatch: perturb the controller's internal
+    # predictor while leaving the simulated physical plant unchanged.
+    if model_scale != 1.0:
+        if plant_name=='greenhouse':
+            predictor.A = predictor.A * model_scale
+        else:
+            predictor.infiltration_eff = predictor.infiltration_eff * model_scale
+            predictor.drainage = predictor.drainage * model_scale
     n=288 if plant_name=='greenhouse' else 336 # 24 h or 7 d, runtime-conscious
     tape,noise,snoise,xhash=exogenous(plant_name,network,seed,n,2)
     net=NetworkEmulator(PROFILES[network],tape)
@@ -98,7 +113,7 @@ def run_one(plant_name,policy,network,seed,event_log=None,*,trigger_delta=.035,
                 for l in logs: event_log.write(json.dumps(l.__dict__,sort_keys=True)+'\n')
             if ok:
                 estimate=meas.copy(); last_sent=meas.copy()
-                u,integ=controller_action('MPC' if 'MPC' in policy else 'PI',plant,estimate,ref,integ,forecast_ex)
+                u,integ=controller_action('MPC' if 'MPC' in policy else 'PI',plant,estimate,ref,integ,forecast_ex,predictor=predictor)
                 applied+=1
             else:
                 deadline+=int(lat>=.8*sample_s)
@@ -140,8 +155,18 @@ def paired(raw):
         for m in METRICS:
           d=(a[m]-b[m]).dropna().to_numpy(float); n=len(d); q=stats.t.ppf(.975,n-1); se=d.std(ddof=1)/math.sqrt(n); lo,hi=d.mean()-q*se,d.mean()+q*se
           _,p=stats.ttest_1samp(d,0); dz=d.mean()/d.std(ddof=1) if d.std(ddof=1)>0 else float('nan')
-          rows.append({'plant':plant,'network':net,'contrast':contrast,'metric':m,'n_pairs':n,'mean_difference':d.mean(),'sd_difference':d.std(ddof=1),'ci95_low':lo,'ci95_high':hi,'p_value':p,'cohen_dz':dz,'probability_A_better':float(np.mean(d<0)),'crn_gate':bool((a.random_tape_sha256==b.random_tape_sha256).all())})
-    out=pd.DataFrame(rows); out['p_value_holm']=holm(out.p_value.fillna(1)); return out
+          lower_is_better = m != 'command_applied_pct'
+          p_better = float(np.mean(d<0)) if lower_is_better else float(np.mean(d>0))
+          rows.append({'plant':plant,'network':net,'contrast':contrast,'metric':m,'n_pairs':n,'mean_difference':d.mean(),'sd_difference':d.std(ddof=1),'ci95_low':lo,'ci95_high':hi,'p_value':p,'cohen_dz':dz,'probability_A_better':p_better,'better_direction':'lower' if lower_is_better else 'higher','crn_gate':bool((a.random_tape_sha256==b.random_tape_sha256).all())})
+    out=pd.DataFrame(rows)
+    # Preregistered multiplicity family: the four plant-controller contrasts
+    # (2 plants x 2 controller families), adjusted separately for each
+    # network x metric endpoint. Raw p-values and unadjusted 95% CIs remain.
+    out['holm_family']='network_metric:'+out['network'].astype(str)+':'+out['metric'].astype(str)
+    out['p_value_holm']=np.nan
+    for _,idx in out.groupby(['network','metric'],sort=False).groups.items():
+        out.loc[idx,'p_value_holm']=holm(out.loc[idx,'p_value'].fillna(1).to_numpy())
+    return out
 
 def run_sensitivity(seeds=15):
     """Compact prespecified sensitivity/ablation grid (not primary inference)."""
