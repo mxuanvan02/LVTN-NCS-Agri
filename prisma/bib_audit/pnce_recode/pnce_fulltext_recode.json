@@ -659,7 +659,7 @@
    "n1_protocol": "ZigBee_802154",
    "n2_latency": "not_reported",
    "n3_packet_loss": "not_reported",
-   "c1_strategy": "ETC_event_triggered",
+   "c1_strategy": "STC_self_triggered",
    "c2_trigger": "self_triggered",
    "c3_architecture": "standalone_embedded",
    "e1_control_quality": "water savings while growing healthy crops",
@@ -689,7 +689,8 @@
     },
     "c1_strategy": {
      "locator": "body text (no structural marker)",
-     "quote": "is predicted based on the evolution of the process state variables. Self-triggered control (STC) has an advantage over event-triggered control (ETC) since it does not require dedicated additional energy-consuming hardware to conduct continu"
+     "quote": "Self-triggered control is an aperiodic sampling strategy capable of reducing the number of networked messages compared to traditional periodical sampling.",
+     "rule_error": "First-match rule matched 'event-triggered' inside a comparative sentence that contrasts STC with ETC; the strategy implemented in this paper is self-triggered control, consistent with c2_trigger=self_triggered."
     },
     "c2_trigger": {
      "locator": "body text (no structural marker)",
@@ -733,7 +734,7 @@
     "n1_protocol": "rule",
     "n2_latency": "absent",
     "n3_packet_loss": "absent",
-    "c1_strategy": "rule",
+    "c1_strategy": "adjudicated",
     "c2_trigger": "rule",
     "c3_architecture": "rule",
     "e1_control_quality": "rule",

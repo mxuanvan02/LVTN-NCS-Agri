@@ -87,6 +87,10 @@ CTRL_LABEL = ["MPC", "Mờ/PID", "ML/RL", "Điều khiển tối ưu", "ETC/STC"
 
 pi = {v: i for i, v in enumerate(PROTO_ORDER)}
 ci = {v: i for i, v in enumerate(CTRL_ORDER)}
+# The aperiodic-triggering column covers both taxonomy values allowed by
+# SCHEMA.md: a record may name event-triggered or self-triggered control as its
+# main strategy. Both map onto the single "ETC/STC" column.
+ci["STC_self_triggered"] = ci["ETC_event_triggered"]
 matrix = np.zeros((len(PROTO_ORDER), len(CTRL_ORDER)), dtype=int)
 for r in rows:
     matrix[pi[r["n1_protocol"]], ci[r["c1_strategy"]]] += 1

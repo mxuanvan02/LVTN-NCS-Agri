@@ -35,7 +35,7 @@
       "not_stated": 3,
       "RL_ML": 2,
       "optimal_control": 1,
-      "ETC_event_triggered": 1
+      "STC_self_triggered": 1
     },
     "trigger": {
       "not_stated": 22,
@@ -230,9 +230,6 @@
       "S20",
       "S58"
     ],
-    "strategy:ETC_event_triggered": [
-      "S16"
-    ],
     "strategy:Fuzzy": [
       "S34",
       "S35",
@@ -257,6 +254,9 @@
     "strategy:RL_ML": [
       "S02",
       "S30"
+    ],
+    "strategy:STC_self_triggered": [
+      "S16"
     ],
     "strategy:none_monitoring_only": [
       "S55",
