@@ -197,7 +197,11 @@ for rid, rv in REVIEWS.items():
         + (" Reviewed source is a doctoral thesis, not a peer-reviewed article." if rid == "S05" else "")
     )
     row["applicability_note"] = rv["applicability_note"]
-    row["pnce_evidence_note"] += " | Full-text audit (pass 3): " + rv["pnce"]
+    # Appending unconditionally would stack another copy of the same audit
+    # note on every rerun, so the marker is added only once.
+    _pass3_note = " | Full-text audit (pass 3): " + rv["pnce"]
+    if _pass3_note not in row["pnce_evidence_note"]:
+        row["pnce_evidence_note"] += _pass3_note
     row["audit_status"] = "fulltext_review_complete"
     row["reviewer_id"] = "pass3_fulltext_audit_2026"
     row["audit_date"] = "2026-08-10"

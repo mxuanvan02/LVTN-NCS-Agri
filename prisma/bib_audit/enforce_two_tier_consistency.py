@@ -26,6 +26,29 @@ AUDIT = Path(__file__).resolve().parent
 ROB = AUDIT / "rob_grade_audit_log.csv"
 CLAIMS = AUDIT / "grade_claim_audit.csv"
 TIERS = AUDIT / "two_tier_corpus.csv"
+CORPUS = AUDIT / "lvtn_68_clean_corpus_FINAL.csv"
+
+# Why a record sits in Tier 2 decides what the audit log may claim about it.
+# Reusing one hard-coded sentence for every reason states things that are not
+# true of most Tier-2 records, so the cause text is derived from `tier_reason`.
+TIER2_CAUSE = {
+    "retrieved_but_secondary_review": (
+        "the publisher article type is a secondary review, which the eligibility "
+        "criteria exclude from primary evidence"
+    ),
+    "methodological_context_source": (
+        "the record is retained only as a methodological context source, which the "
+        "eligibility criteria exclude from primary evidence"
+    ),
+    "fulltext_not_retrieved": (
+        "no reviewable lawful full text was obtained, so the record stays in the "
+        "PRISMA 'Reports not retrieved' box and never passed eligibility assessment"
+    ),
+}
+
+# Only these reasons justify rewriting a record's role to context_secondary. A
+# record that merely lacks full text keeps its declared role.
+CONTEXT_REASONS = {"retrieved_but_secondary_review", "methodological_context_source"}
 
 
 def read(path):
@@ -40,8 +63,31 @@ def write(path, rows):
         w.writerows(rows)
 
 
+def norm_doi(value: object) -> str:
+    value = str(value or "").strip()
+    for prefix in ("https://doi.org/", "http://doi.org/", "doi:"):
+        if value.lower().startswith(prefix):
+            value = value[len(prefix):]
+    return value.strip()
+
+
+def disposition_of(row, tier, reason) -> str:
+    """Map a record onto its PRISMA 2020 flow-diagram box."""
+    rid = row["record_id"]
+    if tier.get(rid) == "tier1_core":
+        return "included"
+    if row["fulltext_status"] == "fulltext_reviewed":
+        # Full text was read, then excluded at the eligibility step.
+        return "fulltext_excluded_secondary_review"
+    if reason.get(rid) == "methodological_context_source":
+        return "report_not_retrieved_context"
+    return "report_not_retrieved"
+
+
 def main() -> None:
-    tier = {r["id"]: r["tier"] for r in read(TIERS)}
+    tier_rows = {r["id"]: r for r in read(TIERS)}
+    tier = {rid: r["tier"] for rid, r in tier_rows.items()}
+    reason = {rid: r.get("tier_reason", "") for rid, r in tier_rows.items()}
 
     # ---------------------------------------------------------------- 1. S46
     rob = read(ROB)
@@ -54,20 +100,40 @@ def main() -> None:
             continue
         # A Tier-2 record must not carry an analytical RoB verdict.
         old = row["rob_overall"]
-        row["record_role"] = "context_secondary"
+        why = reason.get(rid, "")
+        cause = TIER2_CAUSE.get(why, f"the record is Tier 2 ({why or 'reason not recorded'})")
+        if why in CONTEXT_REASONS:
+            row["record_role"] = "context_secondary"
         row["rob_overall"] = "not_assessable"
         row["rob_basis"] = (
-            "Excluded from analytical RoB synthesis: the publisher article type is a "
-            "secondary review, which the eligibility criteria exclude from primary "
-            f"evidence. The earlier locator-backed reading (previous verdict: {old}) is "
-            "retained in the domain columns as a record of what was read, but it does "
-            "not contribute to the Tier-1 RoB counts."
+            f"Excluded from analytical RoB synthesis: {cause}. The earlier "
+            f"locator-backed reading (previous verdict: {old}) is retained in the "
+            "domain columns as a record of what was read, but it does not contribute "
+            "to the Tier-1 RoB counts."
         )
         row["audit_status"] = "tier2_context_not_synthesised"
-        changed.append((rid, old))
+        changed.append((rid, old, why))
 
-    if changed:
-        write(ROB, rob)
+    # ------------------------------------------------------- 1b. DOI + PRISMA
+    # The corpus file is the bibliographic source of truth; a blank DOI in the
+    # audit log hides a verifiable identifier instead of recording it.
+    corpus_doi = {r["id"]: norm_doi(r.get("doi")) for r in read(CORPUS)}
+    doi_synced = []
+    for row in rob:
+        want = corpus_doi.get(row["record_id"], "")
+        if want and norm_doi(row.get("doi")) != want:
+            row["doi"] = want
+            doi_synced.append(row["record_id"])
+
+    # Every record must state which PRISMA box it ended in, otherwise the tier
+    # split cannot be checked against the reported flow diagram.
+    if "prisma_disposition" not in rob[0]:
+        for row in rob:
+            row["prisma_disposition"] = ""
+    for row in rob:
+        row["prisma_disposition"] = disposition_of(row, tier, reason)
+
+    write(ROB, rob)
 
     # ------------------------------------------------------------- 2. GRADE
     claims = read(CLAIMS)
@@ -123,10 +189,20 @@ def main() -> None:
     write(CLAIMS, claims)
 
     print("--- Tier-2 records stripped of analytical RoB verdicts ---")
-    for rid, old in changed:
-        print(f"  {rid}: {old} -> not_assessable (tier2 context)")
+    for rid, old, why in changed:
+        print(f"  {rid}: {old} -> not_assessable ({why or 'reason not recorded'})")
     if not changed:
         print("  (none)")
+
+    print("\n--- DOI synced from the corpus file ---")
+    print("  " + (", ".join(doi_synced) if doi_synced else "(none)"))
+
+    counts: dict[str, int] = {}
+    for row in rob:
+        counts[row["prisma_disposition"]] = counts.get(row["prisma_disposition"], 0) + 1
+    print("\n--- PRISMA disposition ---")
+    for key in sorted(counts):
+        print(f"  {key}: {counts[key]}")
 
     print("\n--- GRADE claims after restricting to Tier 1 ---")
     for cid, n1, n2, final in claim_report:

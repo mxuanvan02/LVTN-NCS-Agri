@@ -1,4 +1,4 @@
-id,title,year,venue,doi,source,replacement_key
+﻿id,title,year,venue,doi,source,replacement_key
 S01,Data-driven model predictive control for irrigation management in agricultural greenhouses under CO2 enrichment,2025,Smart Agricultural Technology,10.1016/j.atech.2025.101071,verified original seed,
 S02,Enhancing greenhouse efficiency: Integrating IoT and reinforcement learning for optimized climate control,2024,Sensors,10.3390/s24248109,verified replacement,platero2024enhancing
 S03,RL-Guided MPC for Autonomous Greenhouse Control,2025,IFAC-PapersOnLine,10.1016/j.ifacol.2025.11.829,verified original seed,
@@ -20,7 +20,7 @@ S18,A Sensitivity-Based Approach to Self-Triggered Nonlinear Model Predictive Co
 S19,Self-Triggered DMPC for Dynamically Coupled Systems With Reduced Conservatism,2025,IEEE Transactions on Industrial Informatics,10.1109/tii.2025.3593862,verified original seed,
 S20,Self-Triggered Distributed Model Predictive Control with Synchronization Parameters Interaction,2024,arXiv (Cornell University),10.48550/arxiv.2405.11006,verified original seed,
 S21,Event-Based Sensor Data Scheduling: Trade-Off Between Communication Rate and Estimation Quality,2013,IEEE Transactions on Automatic Control,10.1109/tac.2012.2215253,verified original seed,
-S22,A survey on recent advances in event-triggered communication and control,2018,Information Sciences,,verified replacement,peng2018survey
+S22,A survey on recent advances in event-triggered communication and control,2018,Information Sciences,10.1016/j.ins.2018.04.055,verified replacement,peng2018survey
 S23,Data-driven-based fully distributed event-triggered control for nonlinear multi-agent systems,2025,Applied Mathematics and Computation,10.1016/j.amc.2025.129307,verified original seed,
 S24,Event-Triggered Distributed Optimal Bipartite Consensus Control for Multi-Agent Systems via Adaptive Dynamic Programming,2025,"2025 10th International Conference on Control, Robotics and Cybernetics (CRC)",10.1109/crc67523.2025.11288265,verified original seed,
 S25,Disturbance Rejection Self-Triggered Distributed MPC With Adaptive Prediction Horizon for Asynchronous Multiagent Systems,2024,"IEEE Transactions on Systems, Man, and Cybernetics: Systems",10.1109/tsmc.2024.3350157,verified original seed,

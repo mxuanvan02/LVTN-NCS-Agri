@@ -84,7 +84,11 @@ for rid, rec in all_records.items():
     row["applicability_note"]=rec.get("applicability_note", row["applicability_note"])
     # Preserve PNCE correction in the evidence note for traceability.
     corr=rec.get("pnce_corrections", "")
-    if corr: row["pnce_evidence_note"] += " | Full-text audit: " + corr
+    # Guarded append: rerunning the import must not duplicate the note.
+    if corr:
+        _note = " | Full-text audit: " + corr
+        if _note not in row["pnce_evidence_note"]:
+            row["pnce_evidence_note"] += _note
     row["audit_status"]="fulltext_review_complete" if reviewed else ("context_only_verified" if rid=="S22" else "retrieval_attempted_fulltext_unavailable")
     row["reviewer_id"]="batch_fulltext_audit_2026"
     row["audit_date"]="2026-08-10"
