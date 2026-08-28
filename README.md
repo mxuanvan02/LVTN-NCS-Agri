@@ -39,6 +39,7 @@ Các con số trên mô tả trạng thái audit của luận văn; chúng khôn
 prisma/
   tools/                 # Công cụ dựng lại audit PRISMA
   bib_audit/             # Corpus, PNCE, truy xuất, RoB/GRADE và script audit
+    test_*.py            # Kiểm thử hồi quy cho quy tắc phân tầng bằng chứng
 simulation/
   src/                   # Plant, controller, trigger, network và energy models
   experiments/           # Benchmark, ablation và các script đánh giá
@@ -94,6 +95,33 @@ python3 prisma/bib_audit/enforce_two_tier_consistency.py
 python3 prisma/bib_audit/build_two_tier_corpus.py
 python3 prisma/bib_audit/regen_ch3_tier1.py
 ```
+
+Bước `enforce_two_tier_consistency.py` áp quy tắc hai tầng lên nhật ký audit: nó
+giới hạn `included_record_ids` của mỗi nhận định GRADE trong Tier 1, chuyển các
+bản ghi Tier 2 sang cột `tier2_context_record_ids`, gỡ phán đoán RoB phân tích
+khỏi bản ghi Tier 2 và ghi ô PRISMA tương ứng vào cột `prisma_disposition`.
+Script được thiết kế idempotent: chạy lại nhiều lần cho cùng một kết quả, nên
+trình tự trên có thể lặp mà không làm mất dấu vết nguồn bối cảnh.
+
+Để kiểm tra tính chất đó trước khi tin vào số liệu:
+
+```bash
+python3 -m unittest discover -s prisma/bib_audit -p 'test_*.py' -v
+```
+
+Bộ kiểm thử xác nhận năm điều kiện: chạy lặp không làm đổi nhật ký; ID Tier 2
+không bị xóa ở lần chạy thứ hai; `included_record_ids` chỉ chứa bản ghi Tier 1;
+phần mở đầu của `certainty_rationale` không bị nối thêm bản sao; và không bản ghi
+nào xuất hiện đồng thời ở hai cột. Bộ kiểm thử cũng đối chiếu lý do hạ tầng theo
+`tier_reason`, nhằm tránh gán nhãn *secondary review* cho bản ghi thực chất chỉ
+thiếu toàn văn.
+
+Sau khi chạy lại pipeline, `prisma/bib_audit/two_tier_corpus.csv` có thể hiện ra
+ở `git status` như đã thay đổi. Nguyên nhân là ký tự kết thúc dòng: trình ghi CSV
+của Python sinh CRLF, trong khi một phần tệp trong repository được lưu ở dạng LF.
+Nội dung các ô không đổi. Khi cần khẳng định kết quả tái lập, nên đối chiếu
+checksum của `rob_grade_audit_log.csv` và `grade_claim_audit.csv`, hoặc so sánh
+theo từng ô sau khi chuẩn hóa ký tự kết thúc dòng, thay vì so sánh byte trực tiếp.
 
 Tài liệu chi tiết:
 
