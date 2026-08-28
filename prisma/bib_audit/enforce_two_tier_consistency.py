@@ -77,13 +77,35 @@ def main() -> None:
 
     claim_report = []
     for c in claims:
-        ids = [x.strip() for x in c["included_record_ids"].replace(";", ",").split(",") if x.strip()]
+        # The script must be idempotent. On a second run `included_record_ids`
+        # already holds Tier-1 IDs only, so re-deriving the split from that
+        # column alone would silently blank `tier2_context_record_ids` and
+        # erase the provenance of the set-aside context records. Read both
+        # columns back in and re-partition their union instead.
+        ids = [
+            x.strip()
+            for x in (
+                c["included_record_ids"]
+                + ","
+                + c.get("tier2_context_record_ids", "")
+            ).replace(";", ",").split(",")
+            if x.strip()
+        ]
+        seen: set[str] = set()
+        ids = [i for i in ids if not (i in seen or seen.add(i))]
         t1 = [i for i in ids if tier.get(i) == "tier1_core"]
         t2 = [i for i in ids if tier.get(i) != "tier1_core"]
         c["included_record_ids"] = ", ".join(t1)
         c["tier2_context_record_ids"] = ", ".join(t2)
 
-        if t2:
+        if t2 and "Certainty is now computed on the" in c["certainty_rationale"]:
+            # Rationale already carries the tier-split preamble; do not stack
+            # another copy of it on every rerun.
+            c["imprecision_downgrade"] = (
+                "serious: the evidence base for this claim shrank to "
+                f"{len(t1)} auditable record(s) after the tier split"
+            )
+        elif t2:
             c["certainty_rationale"] = (
                 f"Certainty is now computed on the {len(t1)} Tier-1 contributing record(s) "
                 f"({', '.join(t1)}) only. {len(t2)} record(s) previously counted towards this "
